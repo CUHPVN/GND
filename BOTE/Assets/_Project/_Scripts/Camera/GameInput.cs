@@ -61,7 +61,8 @@ public class GameInput : MonoBehaviour
     }
     return false;
 #else
-        return EventSystem.current.IsPointerOverGameObject();
+        //return EventSystem.current.IsPointerOverGameObject();
+        return false;
 #endif
     }
 }

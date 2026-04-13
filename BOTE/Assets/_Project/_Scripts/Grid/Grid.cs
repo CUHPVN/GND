@@ -124,7 +124,6 @@ namespace CUHP
             int x, y;
             
             GetXY(worldPosition, out x, out y);
-            Debug.Log("GetGridObject: " + x + " " + y);
             return GetGridObject(x, y);
         }
         public Vector3 IsoToXY(Vector3 v)

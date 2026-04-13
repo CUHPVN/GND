@@ -22,7 +22,8 @@ public class GridManager : MonoBehaviour
                 Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
                 if (grid.GetGridObject(mouseWorldPosition) != null)
                 {
-                    Debug.Log(grid.GetGridObject(mouseWorldPosition).x + " " + grid.GetGridObject(mouseWorldPosition).y);
+                    //TODO
+                    //Debug.Log(grid.GetGridObject(mouseWorldPosition).x + " " + grid.GetGridObject(mouseWorldPosition).y);
                 }
             }
     }

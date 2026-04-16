@@ -6,6 +6,7 @@ public class InventorySlot : MonoBehaviour , IDropHandler
 {
     [Header("InventoryRoot")]
     [SerializeField] private Transform InventoryRoot;
+    [SerializeField] private Image slotImage;
     
     public void SetRoot(Transform root)
     {
@@ -14,6 +15,14 @@ public class InventorySlot : MonoBehaviour , IDropHandler
     public Transform GetRoot()
     {
         return InventoryRoot;
+    }
+    public void Selected()
+    {
+        slotImage.color = Color.yellow;
+    }
+    public void Unselected()
+    {
+        slotImage.color = Color.white;
     }
     public void OnDrop(PointerEventData eventData)
     {

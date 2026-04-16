@@ -11,9 +11,9 @@ public class PathFinding
     private List<PathNode> openList;
     private List<PathNode> closeList;
 
-    public PathFinding(int width , int height, float cellSize)
+    public PathFinding(int width , int height, float cellSize,bool debugMode = false)
     {
-        grid = new IsometricGrid<PathNode>(width, height, cellSize, Vector3.zero, (IsometricGrid<PathNode> g, int x, int y) => new PathNode(g, x, y));
+        grid = new IsometricGrid<PathNode>(width, height, cellSize, Vector3.zero, (IsometricGrid<PathNode> g, int x, int y) => new PathNode(g, x, y),debugMode);
     }
     public List<PathNode> FindPath(int startX, int startY, int endX,int endY)
     {

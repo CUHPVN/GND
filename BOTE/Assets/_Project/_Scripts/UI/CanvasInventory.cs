@@ -48,7 +48,8 @@ public class CanvasInventory : UICanvas
     private void AddItemRandomCount()
     {
         int remainCount=0;
-        bool added = InventoryManager.Instance.AddItem(InventoryManager.Instance.GetRandomItem(), out remainCount, Random.Range(1, 5));
+        ItemSO item = InventoryManager.Instance.GetRandomItem(); 
+        bool added = InventoryManager.Instance.AddItem(item, out remainCount,item.stackable?Random.Range(1, 5):1);
         if (!added)
         {
             Debug.Log("Inventory is full!");

@@ -20,14 +20,16 @@ namespace CUHP
         private TGridObject[,] gridArray;
         private Vector3 originPosition;
         private TextMesh[,] debugTextArray;
+        private bool debugMode=true;
 
-        public IsometricGrid(int width, int height, float cellSize, Vector3 originPosition, Func<IsometricGrid<TGridObject>, int,int, TGridObject> createGridObject)
+        public IsometricGrid(int width, int height, float cellSize, Vector3 originPosition, Func<IsometricGrid<TGridObject>, int,int, TGridObject> createGridObject,bool debugMode=false)
         {
             this.width = width;
             this.height = height;
             this.cellSize = cellSize;
+            this.debugMode = debugMode;
             gridArray = new TGridObject[width, height];
-            debugTextArray = new TextMesh[width, height];
+            if(debugMode) debugTextArray = new TextMesh[width, height];
             this.originPosition = originPosition;
             for (int i = 0; i < width; i++)
             {
@@ -43,7 +45,7 @@ namespace CUHP
                 {
                     for (int j = 0; j < height; j++)
                     {
-                        debugTextArray[i, j] = UtilsClass.CreateWorldText(0.05f, gridArray[i, j]?.ToString(), null, GetWorldPositionOffset(i,j), 40, Color.white, TextAnchor.MiddleCenter);
+                        if(debugMode) debugTextArray[i, j] = UtilsClass.CreateWorldText(0.05f, gridArray[i, j]?.ToString(), null, GetWorldPositionOffset(i,j), 40, Color.white, TextAnchor.MiddleCenter);
                         Debug.DrawLine(GetWorldPosition(i, j), GetWorldPosition(i, j + 1), Color.white, 100f);
                         Debug.DrawLine(GetWorldPosition(i, j), GetWorldPosition(i + 1, j), Color.white, 100f);
                     }
@@ -94,7 +96,7 @@ namespace CUHP
             if(x>=0&&y>=0&&x<width && y < height)
             {
                 gridArray[x, y] = value;
-                debugTextArray[x,y].text = value.ToString();
+                if(debugMode) debugTextArray[x,y].text = value.ToString();
                 if (OnGridObjectChanged != null) OnGridObjectChanged(this, new OnGridObjectChangedEventArg { x = x, y = y });
             }
         }

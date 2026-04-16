@@ -94,15 +94,16 @@ Assets/
   Grid/
    Grid.cs
    GridManager.cs
-   GridPathFinding.cs
    PathFinding/
     PathFinding.cs
     PathNode.cs
+   PlayerPathFinding.cs
   Inventory/
    InventoryItem.cs
    InventoryManager.cs
    InventorySlot.cs
    ItemSO.cs
+  Player/PlayerController.cs
   UI/
    CanvasGamePlay.cs
    CanvasInventory.cs

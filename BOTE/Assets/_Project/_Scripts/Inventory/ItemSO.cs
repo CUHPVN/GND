@@ -31,7 +31,8 @@ public enum ItemType
     Axe=6,
     Shovel=7,
     Hoe=8,
-    WateringCan=9
+    WateringCan=9,
+    Seed=10,
 }
 public enum ActionType
 {

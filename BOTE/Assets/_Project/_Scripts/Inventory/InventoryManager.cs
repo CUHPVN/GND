@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 public class InventoryManager : Singleton<InventoryManager>
 {
@@ -8,6 +9,21 @@ public class InventoryManager : Singleton<InventoryManager>
     void Awake()
     {
         itemSOArray = Resources.LoadAll<ItemSO>("SO/Items");
+    }
+    void Update()
+    {
+        for (int i = 0; i < 9; i++) {
+        if (Input.GetKeyDown(KeyCode.Alpha1 + i)) {
+            int slotIndex = i; 
+            foreach (InventorySlot slot in inventorySlots)
+            {
+                slot.Unselected();
+            }
+            if (slotIndex < inventorySlots.Length) {
+                InventorySlot selectedSlot = inventorySlots[slotIndex];
+                selectedSlot.Selected();}
+        }
+    }
     }
     public ItemSO GetRandomItem()
     {

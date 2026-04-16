@@ -11,7 +11,7 @@ public class GridManager : MonoBehaviour
     private IsometricGrid<FarmLand> grid;
     void Start()
     {
-        grid = new IsometricGrid<FarmLand>(width, height, cellSize, Vector3.zero, (IsometricGrid<FarmLand> g, int x, int y) => new FarmLand(g, x, y));
+        grid = new IsometricGrid<FarmLand>(width, height, cellSize, transform.position, (IsometricGrid<FarmLand> g, int x, int y) => new FarmLand(g, x, y));
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class GridManager : MonoBehaviour
                 if (grid.GetGridObject(mouseWorldPosition) != null)
                 {
                     //TODO
-                    //Debug.Log(grid.GetGridObject(mouseWorldPosition).x + " " + grid.GetGridObject(mouseWorldPosition).y);
+                    Debug.Log(grid.GetGridObject(mouseWorldPosition).x + " " + grid.GetGridObject(mouseWorldPosition).y);
                 }
             }
     }

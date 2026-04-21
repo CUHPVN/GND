@@ -57,7 +57,7 @@ namespace HisaGames.CutsceneManager
             instance = this;
             InitCharacters();
             InitProps();
-            InitCutscenes(currentCutscene);
+          // InitCutscenes(currentCutscene);
         }
 
         /// <summary>

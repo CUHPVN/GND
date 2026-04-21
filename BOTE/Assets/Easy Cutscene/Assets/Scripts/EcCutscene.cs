@@ -13,6 +13,7 @@ namespace HisaGames.Cutscene
 {
     public class EcCutscene : MonoBehaviour
     {
+        bool isPlaying = false;
         [System.Serializable]
         public class CharacterData
         {
@@ -48,6 +49,8 @@ namespace HisaGames.Cutscene
         [System.Serializable]
         public class CutsceneData
         {
+            public bool autoNext;
+
             [Header("Cutscene Data")]
             [Tooltip("Name of the cutscene.")]
             public string name;
@@ -107,14 +110,16 @@ namespace HisaGames.Cutscene
 
         void Start()
         {
-            StartCutscene();
+            //StartCutscene();
         }
+
 
         /// <summary>
         /// Initializes cutscene settings and starts the first cutscene.
         /// </summary>
         public void StartCutscene()
         {
+            isPlaying = true;
             currentID = 0;
             autoplayTime = EcCutsceneManager.instance.autoplayTime;
             startTyping = false;
@@ -128,6 +133,7 @@ namespace HisaGames.Cutscene
         /// </summary>
         void Update()
         {
+            if (!isPlaying) return;
             AutoPlayingCutscene();
 
             if (startTyping)
@@ -358,6 +364,7 @@ namespace HisaGames.Cutscene
                 {
                     Debug.Log("Cutscene finished");
                     EcCutsceneManager.instance.closeCutscenes();
+                    isPlaying = false;
                 }
             }
             else
@@ -373,12 +380,13 @@ namespace HisaGames.Cutscene
         /// </summary>
         void AutoPlayingCutscene()
         {
-            float temp = EcCutsceneManager.instance.autoplayTime;
-            if (temp >= 0 && chatText.text == chatTextString)
+            if (!isPlaying) return;
+            if (!cutsceneData[currentID].autoNext) return;
+
+            if(chatText.text == chatTextString)
             {
-                //auto play cutscene on
                 autoplayTime -= Time.deltaTime;
-                if (autoplayTime <= 0)
+                if(autoplayTime <= 0)
                 {
                     PlayNextCutscene();
                 }

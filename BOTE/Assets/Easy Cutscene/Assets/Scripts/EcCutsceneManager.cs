@@ -186,5 +186,6 @@ namespace HisaGames.CutsceneManager
         {
             getCutscenesObject(currentCutscene).PlayNextCutscene();
         }
+
     }
 }

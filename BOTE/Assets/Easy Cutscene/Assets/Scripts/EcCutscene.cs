@@ -49,7 +49,6 @@ namespace HisaGames.Cutscene
         [System.Serializable]
         public class CutsceneData
         {
-            public bool autoNext;
 
             [Header("Cutscene Data")]
             [Tooltip("Name of the cutscene.")]
@@ -73,6 +72,8 @@ namespace HisaGames.Cutscene
 
             [Tooltip("Event triggered after the cutscene ends.")]
             public CSUnityEvent cutscenePostEvent;
+
+            public bool autoNext;
         }
 
         [SerializeField]
@@ -152,6 +153,14 @@ namespace HisaGames.Cutscene
                 {
                     EcProps props = EcCutsceneManager.instance.getPropObject(activePropsData[i].name);
                     props.PropUpdate();
+                }
+            }
+
+            if (cutsceneData[currentID].autoNext == false)
+            {
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    cutsceneData[currentID].autoNext = true;
                 }
             }
         }
@@ -351,6 +360,7 @@ namespace HisaGames.Cutscene
         /// </summary>
         public void PlayNextCutscene()
         {
+            if (cutsceneData[currentID].autoNext == false) return;
             if (chatText.text == chatTextString)
             {
                 InvokePostEvent();
@@ -375,15 +385,16 @@ namespace HisaGames.Cutscene
             }
         }
 
+
         /// <summary>
         /// Automatically progresses to the next cutscene based on the timer.
         /// </summary>
         void AutoPlayingCutscene()
         {
+            return;
             if (!isPlaying) return;
-            if (!cutsceneData[currentID].autoNext) return;
 
-            if(chatText.text == chatTextString)
+            if (chatText.text == chatTextString)
             {
                 autoplayTime -= Time.deltaTime;
                 if(autoplayTime <= 0)

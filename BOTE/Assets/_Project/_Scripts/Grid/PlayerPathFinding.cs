@@ -73,15 +73,15 @@ public class PlayerPathFinding : MonoBehaviour
         {
             hightLight.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            if (gridObject != null)
-            {
-                gridObject.SetCanWalk(false);
-                Instantiate(wall, gridObject.ReturnPathPosition(), Quaternion.identity);
-            }
-        }
-        if (Input.GetMouseButtonDown(1))
+        // if (Input.GetKeyDown(KeyCode.Space)) 
+        // {
+        //     if (gridObject != null)
+        //     {
+        //         gridObject.SetCanWalk(false);
+        //         Instantiate(wall, gridObject.ReturnPathPosition(), Quaternion.identity);
+        //     }
+        // }
+        if (Input.GetMouseButtonDown(0))
         {
             if (gridObject != null)
             {

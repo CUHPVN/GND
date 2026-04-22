@@ -1,14 +1,20 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Vector2Int position;
+    [SerializeField] public Vector2Int position;
     [SerializeField] private float speed = 5;
     [SerializeField] private Vector3 cachePos;
     [SerializeField] private bool availableToMove=true;
     [SerializeField] private float remainTime=0;
+    [SerializeField] private GameObject FObject;
+    [SerializeField] private FarmGridManager farmGridManager;
+    [SerializeField] private InteractGridManager interactGridManager;
     private Coroutine moveCor;
+
     public bool MoveTo(Vector2[] vector,Vector2Int[] pos)
     {
         if(vector.Length==1) return false;
@@ -30,10 +36,15 @@ public class PlayerController : MonoBehaviour
         while (index < vector.Length)
         {
             float t=0;
-            float duration = 1/speed;
+            float tmpSpeed = speed;
+            Direction direction = DirectionCalulate(transform.position, cachePos);
             cachePos =vector[index];
             position=pos[index];
-            DirectionCalulate(transform.position,cachePos);
+            if(direction == Direction.Up || direction == Direction.Down || direction == Direction.Right || direction ==Direction.Left)
+            {
+                tmpSpeed/=Mathf.Sqrt(2);
+            }
+            float duration = 1/tmpSpeed;
             while (t < duration)
             {
                 t+=Time.deltaTime;
@@ -48,7 +59,13 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator MoveToCache(float t)
     {
-        float duration = 1/speed;
+        float tmpSpeed = speed;
+        Direction direction = DirectionCalulate(transform.position, cachePos);
+        if(direction == Direction.Up || direction == Direction.Down || direction == Direction.Right || direction ==Direction.Left)
+        {
+            tmpSpeed/=Mathf.Sqrt(2);
+        }
+        float duration = 1/tmpSpeed;
         DirectionCalulate(transform.position,cachePos);
         while (t < duration)
         {
@@ -99,6 +116,46 @@ public class PlayerController : MonoBehaviour
             return Direction.LeftUp;
         } 
         return Direction.Down;
+    }
+    void Update()
+    {
+        CheckInteract();
+    }
+    void CheckInteract()
+    {
+        Vector3 playerPosition = transform.position;
+        FarmLand farmLand = farmGridManager.grid.GetGridObject(playerPosition);
+        InteractObject interactObject = interactGridManager.grid.GetGridObject(playerPosition);
+        if (farmLand != null)
+        {
+            ShowInteract();
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                farmLand.Interact(CircularManager.Instance.currentItem);
+            }
+        }
+        else
+        if (interactObject != null)
+        {
+            ShowInteract();
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                interactObject.interactable.Interact(CircularManager.Instance.currentItem);
+            }
+        }
+        else
+        {
+            HideInteract();
+        }
+    }
+    internal void ShowInteract()
+    {
+        FObject.SetActive(true);
+    }
+
+    internal void HideInteract()
+    {
+        FObject.SetActive(false);
     }
 }
 public enum Direction

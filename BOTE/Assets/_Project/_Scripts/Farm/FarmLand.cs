@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CUHP;
+using System;
 
-public class FarmLand 
+public class FarmLand : MonoBehaviour
 {
-    private IsometricGrid<FarmLand> grid;
+    public IsometricGrid<FarmLand> grid;
     public int x;
     public int y;
-    public FarmLand(IsometricGrid<FarmLand> grid, int x, int y)
+
+    internal void Interact(ItemData currentItem)
     {
-        this.grid = grid;
-        this.x = x;
-        this.y = y;
+        Debug.Log(x + " " + y);
     }
+    // public FarmLand(IsometricGrid<FarmLand> grid, int x, int y)
+    // {
+    //     this.grid = grid;
+    //     this.x = x;
+    //     this.y = y;
+    // }
 }

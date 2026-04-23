@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 1216841909}
   - component: {fileID: 1216841910}
   m_Layer: 0
-  m_Name: EcCutscene1 (1)
+  m_Name: Silas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -535,35 +535,231 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneData:
-  - name: "t\xE9t"
+  - name: 
     charactersData: []
     propsData: []
     nameString: 
-    chatString: moichan
+    chatString: "\u0110\xE3 t\u1EEBng c\xF3 m\u1ED9t th\u1EDDi gian... n\u01A1i con
+      ng\u01B0\u1EDDi ch\u1EC9 c\u1EA7n gieo h\u1EA1t l\xE0 \u0111\u1EA5t m\u1EB9
+      s\u1EBD h\u1ED3i \u0111\xE1p."
     cutscenePreEvent:
       m_PersistentCalls:
         m_Calls: []
     cutscenePostEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 71180893}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
     autoNext: 1
-  - name: "t\xE9t"
+  - name: 
     charactersData: []
     propsData: []
     nameString: 
-    chatString: ???????/
+    chatString: "Nh\u01B0ng kho\u1EA3ng th\u1EDDi gian \u0111\xF3 \u0111\xE3 \u0111i
+      v\xE0o d\u0129 v\xE3ng."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "\u1EDE V\xF9ng \u0110\u1EA5t Tro T\xE0n n\xE0y, \u0111\u1EA5t kh\xF4ng
+      th\u1EC3 nu\xF4i s\u1ED1ng con ng\u01B0\u1EDDi \u0111\u01B0\u1EE3c n\u1EEFa."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "N\xF3 th\u1EED th\xE1ch h\u1ECD ..."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "B\xE0o m\xF2n h\u1ECD ..."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "V\xE0 thanh l\u1ECDc nh\u1EEFng k\u1EBB y\u1EBFu \u0111u\u1ED1i."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Nh\u1EEFng v\u1EABn c\xF2n nh\u1EEFng k\u1EBB kh\xF4ng khu\u1EA5t
+      ph\u1EE5c tr\u01B0\u1EDBc s\u1ED1 ph\u1EADn."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: Silas
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ch\u1EC9 l\xE0 m\u1ED9t n\xF4ng d\xE2n"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Kh\xF4ng quy\u1EC1n l\u1EF1c, kh\xF4ng tri th\u1EE9c"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ch\u1EC9 c\xF3 \u0111\xF4i b\xE0n tay chai s\u1EA1n v\xE0 m\u1ED9t
+      th\u1EE9 m\xE0 th\u1EBF gi\u1EDBi n\xE0y \u0111\xE3 \u0111\xE1nh m\u1EA5t t\u1EEB
+      r\u1EA5t l\xE2u..."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "H\u1EB1ng ng\xE0y \xF4ng \u0111\xE0o x\u1EDBi m\u1EA3nh \u0111\u1EA5t
+      kh\xF4 c\u1EB1n n\xE0y kh\xF4ng ph\u1EA3i v\xEC tin r\u1EB1ng n\xF3 s\u1EBD
+      n\u1EDF ra hoa"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "M\xE0 v\xEC \xF4ng tin r\u1EB1ng m\u1ED9t ng\xE0y n\xE0o \u0111\xF3
+      n\xF3 c\xF3 th\u1EC3 h\u1ED3i sinh."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ng\u01B0\u1EDDi ta n\xF3i r\u1EB1ng, \u1EDF T\u1EA7ng Cao, kh\xF4ng
+      kh\xED l\xE0 m\u1ED9t \u0111\u1EB7c \xE2n. Nh\u01B0ng v\u1EDBi Silas"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "T\u1EEBng nh\u1ECBp th\u1EDF \u1EDF \u0111\xE2y \u0111\u1EC1u l\xE0
+      m\u1ED9t cu\u1ED9c \u0111\u1EA5u tranh."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "D\xF9 cho th\u1EBF gi\u1EDBi n\xE0y c\xF3 m\u1EE5c ru\u1ED7ng, c\xF3
+      tha h\xF3a \u0111\u1EBFn \u0111\xE2u \xF4ng v\u1EABn lu\xF4n \u0111\u1EE9ng
+      \u0111\xF3"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Kh\xF4ng ch\u1EC9 \u0111\u1EC3 t\u1ED3n t\u1EA1i m\xE0 c\xF2n v\xEC
+      con g\xE1i \xF4ng v\u1EABn \u0111ang ch\u1EDD."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ch\u1EEBng n\xE0o con b\xE9 c\xF2n th\u1EDF th\xEC hy v\u1ECDng
+      c\u1EE7a \xF4ng s\u1EBD kh\xF4ng b\u1ECB d\u1EADp t\u1EAFt."
     cutscenePreEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -789,7 +985,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     - target: {fileID: 6574975663053359397, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_Name
-      value: EcCutscene1
+      value: IntroWorld
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: chatText
@@ -933,7 +1129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[15].autoNext
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[16].autoNext
@@ -2048,12 +2244,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[1]
       value: 
       objectReference: {fileID: 1216841910}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: cutscenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1643682971}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: characterPrefabs.Array.data[0]
       value: 
@@ -2068,6 +2268,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1216841909}
+    - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1643682970}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
 --- !u!4 &1460095016 stripped
@@ -2480,6 +2683,188 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1643682969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643682970}
+  - component: {fileID: 1643682971}
+  m_Layer: 0
+  m_Name: Elara
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643682970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643682969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460095016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643682971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643682969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c4a232f1b87b04ba7fa5d4567b9b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneData:
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "S\u1EF1 tr\u1EA3 th\xF9 c\u1EE7a thi\xEAn nhi\xEAn ch\u01B0a bao
+      gi\u1EDD bu\xF4ng tha ch\xFAng t\xF4i.... C\u01A1n ho c\u1EE7a con b\xE9 ng\xE0y
+      m\u1ED9t n\u1EB7ng h\u01A1n"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "L\xE3o th\u01B0\u01A1ng nh\xE2n \u1EDF khu ch\u1EE3 \u0111en c\xF3
+      th\u1EE9 thu\u1ED1c xoa d\u1ECBu \u0111\u01B0\u1EE3c c\u01A1n \u0111au n\xE0y,
+      nh\u01B0ng d\u01B0\u1EDBi \u0111\xE1y T\u1EA7ng Th\u1EA5p, ch\u1EB3ng c\xF3
+      \u0111\u1EB7c \xE2n n\xE0o l\xE0 mi\u1EC5n ph\xED"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "H\u1EAFn ta c\u1EA7n ti\u1EC1n, r\u1EA5t nhi\u1EC1u ti\u1EC1n."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "The Ashland... n\u01A1i n\xE0y t\u1EEBng l\xE0 m\u1ED9t thung l\u0169ng
+      n\xF4ng nghi\u1EC7p tr\xF9 ph\xFA, tr\u01B0\u1EDBc khi l\xF2ng tham bi\u1EBFn
+      n\xF3 th\xE0nh V\xF9ng \u0110\u1EA5t Tro T\xE0n."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Gi\u1EDD \u0111\xE2y ch\u1EC9 c\xF2n l\u1EA1i nh\u1EEFng m\u1EA3nh
+      \u0111\u1EA5t v\u1EE5n v\u1EB1n, ng\u1EAFc ngo\u1EA3i d\u01B0\u1EDBi l\xE0n
+      s\u01B0\u01A1ng \u0111\u1ED9c h\u1EA1i"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Nh\u01B0ng \u0111\u1EC3 gi\u1EEF l\u1EA1i h\u01A1i th\u1EDF cho
+      con b\xE9, t\xF4i ph\u1EA3i \u0111\xE1nh th\u1EE9c m\u1EA3nh \u0111\u1EA5t
+      n\xE0y m\u1ED9t l\u1EA7n n\u1EEFa. "
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ph\u1EA3i cu\u1ED1c tung l\u1EDBp v\u1ECF ch\u1EBFt ch\xF3c n\xE0y
+      l\xEAn."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Gieo xu\u1ED1ng nh\u1EEFng h\u1EA1t m\u1EA7m thoi th\xF3p"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "T\u01B0\u1EDBi l\xEAn nh\u1EEFng gi\u1ECDt n\u01B0\u1EDBc \u0111\u1EE5c
+      ng\u1EA7u v\xE0 ..."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Hi v\u1ECDng s\u01B0\u01A1ng m\xF9 ng\xE0y mai s\u1EBD nh\xE2n t\u1EEB
+      h\u01A1n \u0111\u1EC3 m\u1EA7m s\u1ED1ng k\u1ECBp v\u01B0\u01A1n l\xEAn."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 0
+  currentID: 2
+  charaNameText: {fileID: 1460095018}
+  chatText: {fileID: 1460095017}
 --- !u!1 &1648819829
 GameObject:
   m_ObjectHideFlags: 0

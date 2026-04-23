@@ -34,7 +34,7 @@ namespace HisaGames.CutsceneManager
         [SerializeField] EcCutscene[] cutscenes;
 
         [Tooltip("Name of current active cutscene.")]
-        [SerializeField] string currentCutscene;
+        [SerializeField] int currentCutsceneIndex;
 
         [Tooltip("Array of transform settings for character positions and movements.")]
         [SerializeField] EcTransformSetting[] transformSettings;
@@ -57,7 +57,7 @@ namespace HisaGames.CutsceneManager
             instance = this;
             InitCharacters();
             InitProps();
-            InitCutscenes(currentCutscene);
+          // InitCutscenes(currentCutscene);
         }
 
         /// <summary>
@@ -102,17 +102,16 @@ namespace HisaGames.CutsceneManager
                 cutscenes[i].gameObject.SetActive(false);
             }
         }
-        public void InitCutscenes(string cutsceneName)
+        public void InitCutscenes(int cutsceneIndex)
         {
             closeCutscenes();
 
-            currentCutscene = cutsceneName;
-            EcCutscene temp = getCutscenesObject(currentCutscene);
-            if (temp != null)
+            currentCutsceneIndex = cutsceneIndex;
+            if (cutsceneIndex >= 0 && cutsceneIndex < cutscenes.Length)
             {
                 guiPanel.SetActive(true);
-                temp.gameObject.SetActive(true);
-                temp.StartCutscene();
+                cutscenes[cutsceneIndex].gameObject.SetActive(true);
+                cutscenes[cutsceneIndex].StartCutscene();
             }
         }
 
@@ -184,7 +183,19 @@ namespace HisaGames.CutsceneManager
 
         public void PlayNextCutscene()
         {
-            getCutscenesObject(currentCutscene).PlayNextCutscene();
+            cutscenes[currentCutsceneIndex].PlayNextCutscene();
         }
+
+        public bool HasNextCutscene()
+        {
+            return currentCutsceneIndex < cutscenes.Length - 1;
+        }
+
+        public void PlayNextGroupCutScene()
+        {
+            currentCutsceneIndex++;
+            InitCutscenes(currentCutsceneIndex);
+        }
+
     }
 }

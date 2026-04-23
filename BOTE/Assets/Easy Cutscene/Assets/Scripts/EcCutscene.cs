@@ -13,6 +13,7 @@ namespace HisaGames.Cutscene
 {
     public class EcCutscene : MonoBehaviour
     {
+        bool isPlaying = false;
         [System.Serializable]
         public class CharacterData
         {
@@ -48,6 +49,7 @@ namespace HisaGames.Cutscene
         [System.Serializable]
         public class CutsceneData
         {
+
             [Header("Cutscene Data")]
             [Tooltip("Name of the cutscene.")]
             public string name;
@@ -70,6 +72,8 @@ namespace HisaGames.Cutscene
 
             [Tooltip("Event triggered after the cutscene ends.")]
             public CSUnityEvent cutscenePostEvent;
+
+            public bool autoNext;
         }
 
         [SerializeField]
@@ -107,14 +111,16 @@ namespace HisaGames.Cutscene
 
         void Start()
         {
-            StartCutscene();
+            //StartCutscene();
         }
+
 
         /// <summary>
         /// Initializes cutscene settings and starts the first cutscene.
         /// </summary>
         public void StartCutscene()
         {
+            isPlaying = true;
             currentID = 0;
             autoplayTime = EcCutsceneManager.instance.autoplayTime;
             startTyping = false;
@@ -128,6 +134,7 @@ namespace HisaGames.Cutscene
         /// </summary>
         void Update()
         {
+            if (!isPlaying) return;
             AutoPlayingCutscene();
 
             if (startTyping)
@@ -146,6 +153,14 @@ namespace HisaGames.Cutscene
                 {
                     EcProps props = EcCutsceneManager.instance.getPropObject(activePropsData[i].name);
                     props.PropUpdate();
+                }
+            }
+
+            if (cutsceneData[currentID].autoNext == false)
+            {
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    cutsceneData[currentID].autoNext = true;
                 }
             }
         }
@@ -345,6 +360,7 @@ namespace HisaGames.Cutscene
         /// </summary>
         public void PlayNextCutscene()
         {
+            if (cutsceneData[currentID].autoNext == false) return;
             if (chatText.text == chatTextString)
             {
                 InvokePostEvent();
@@ -357,7 +373,17 @@ namespace HisaGames.Cutscene
                 else
                 {
                     Debug.Log("Cutscene finished");
-                    EcCutsceneManager.instance.closeCutscenes();
+                    isPlaying = false;
+
+                    if (EcCutsceneManager.instance.HasNextCutscene())
+                    {
+                        EcCutsceneManager.instance.PlayNextGroupCutScene();
+                    }
+                    else
+                    {
+                        EcCutsceneManager.instance.closeCutscenes();
+                    }
+
                 }
             }
             else
@@ -368,17 +394,19 @@ namespace HisaGames.Cutscene
             }
         }
 
+
         /// <summary>
         /// Automatically progresses to the next cutscene based on the timer.
         /// </summary>
         void AutoPlayingCutscene()
         {
-            float temp = EcCutsceneManager.instance.autoplayTime;
-            if (temp >= 0 && chatText.text == chatTextString)
+            return;
+            if (!isPlaying) return;
+
+            if (chatText.text == chatTextString)
             {
-                //auto play cutscene on
                 autoplayTime -= Time.deltaTime;
-                if (autoplayTime <= 0)
+                if(autoplayTime <= 0)
                 {
                     PlayNextCutscene();
                 }

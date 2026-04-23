@@ -47,10 +47,10 @@ public class CircularItem : MonoBehaviour
         if (itemSO != null)
         {
             image.color = Color.white;
+            image.sprite = itemSO.image;
+            this.itemSO = itemSO;
+            this.count = count;
         }else image.color = new Color(1,1,1,0);
-        this.itemSO = itemSO;
-        this.count = count;
-        image.sprite = itemSO.image;
         RefreshCountText();
     }
     

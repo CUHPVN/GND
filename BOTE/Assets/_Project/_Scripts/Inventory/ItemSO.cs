@@ -31,8 +31,17 @@ public enum ItemType
     Axe=6,
     Shovel=7,
     Hoe=8,
-    WateringCan=9,
-    Seed=10,
+    EmptyWateringCan=9,
+    FullWateringCan=10,
+    WheatSeed=11,
+    CornSeed=12,
+    TomatoSeed=13,
+    PotatoSeed=14,
+    Vaccine=15,
+    Wheat=16,
+    Corn=17,
+    Tomato=18,
+    Potato=19,
 }
 public enum ActionType
 {

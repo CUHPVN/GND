@@ -77,10 +77,13 @@ public class CanvasCircular : UICanvas
             }
             index = (int)(angle / offset);
         }
-        currentItem = index==-1? null : inventorySlots[index].GetItem();
+        SetCurrentItem(index);
         return  index;
     }
-
+    private void SetCurrentItem(int index)
+    {
+        currentItem = index==-1? null : inventorySlots[index].GetItem();
+    }
     public void Highlight(int index)
     {
         
@@ -93,6 +96,7 @@ public class CanvasCircular : UICanvas
         {
             inventorySlots[index].transform.localScale= UnityEngine.Vector3.one*1.25f;
             inventorySlots[index].Selected();
+            SetCurrentItem(index);
         }
         preIndex=index;
     }

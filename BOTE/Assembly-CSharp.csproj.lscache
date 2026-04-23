@@ -92,30 +92,39 @@ Assets/
   CircularManager.cs
   CircularSlot.cs
   ItemData.cs
+ _Project/_Scripts/Core/
+  Boots.cs
+  GamePlayManager.cs
+ _Project/_Scripts/Farm/
+  FarmLand.cs
+  Plant/
+   Plant.cs
+   PlantSO.cs
+   SeedToPlantConfigSO.cs
+ _Project/_Scripts/Grid/
+  FarmGridManager.cs
+  Grid.cs
+  InteractGridManager.cs
+  PathFinding/
+   PathFinding.cs
+   PathNode.cs
+  PlayerPathFinding.cs
+ _Project/_Scripts/Interact/
+  House.cs
+  IInteractable.cs
+  InteractObject.cs
+  Well.cs
+ _Project/_Scripts/Inventory/
+  InventoryItem.cs
+  InventoryManager.cs
+  InventorySlot.cs
+  ItemSO.cs
  _Project/_Scripts/
-  Farm/FarmLand.cs
-  Grid/
-   FarmGridManager.cs
-   Grid.cs
-   InteractGridManager.cs
-   PathFinding/
-    PathFinding.cs
-    PathNode.cs
-   PlayerPathFinding.cs
-  Interact/
-   House.cs
-   IInteractable.cs
-   InteractObject.cs
-   Well.cs
-  Inventory/
-   InventoryItem.cs
-   InventoryManager.cs
-   InventorySlot.cs
-   ItemSO.cs
   Player/PlayerController.cs
   UI/
    CanvasCircular.cs
    CanvasGamePlay.cs
+   CanvasHouse.cs
    CanvasInventory.cs
    CanvasMainMenu.cs
    PopUpUI.cs

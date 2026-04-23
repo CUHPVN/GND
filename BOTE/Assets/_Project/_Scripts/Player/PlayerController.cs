@@ -129,18 +129,33 @@ public class PlayerController : MonoBehaviour
         if (farmLand != null)
         {
             ShowInteract();
-            if (Input.GetKeyDown(KeyCode.F))
+            if (!GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.F))
             {
-                farmLand.Interact(CircularManager.Instance.currentItem);
+                if (farmLand.Interact(CircularManager.Instance.currentItem,out bool isItemChanged))
+                {
+                    CircularManager.Instance.UseItem();
+                }
+                if (isItemChanged)
+                {
+                    CircularManager.Instance.ChangeItem();
+                }
             }
+            
         }
         else
         if (interactObject != null)
         {
             ShowInteract();
-            if (Input.GetKeyDown(KeyCode.F))
+            if (!GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.F))
             {
-                interactObject.interactable.Interact(CircularManager.Instance.currentItem);
+                if (interactObject.interactable.Interact(CircularManager.Instance.currentItem,out bool isItemChanged))
+                {
+                    CircularManager.Instance.UseItem();
+                }
+                if (isItemChanged)
+                {
+                    CircularManager.Instance.ChangeItem();
+                }
             }
         }
         else

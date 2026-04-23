@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 735ae57965ee5f74da26add84a054474, type: 3}
-  m_Name: Seed
+  m_Name: WheatSeed
   m_EditorClassIdentifier: 
   tileBase: {fileID: 0}
-  itemType: 10
+  itemType: 11
   actionType: 0
   range: {x: 0, y: 0}
   stackable: 1
-  maxStack: 64
-  image: {fileID: 21300000, guid: 7e572fa9276bf6b46ad79bb7b71f7fdf, type: 3}
+  maxStack: 999
+  image: {fileID: 385147668, guid: a9d617780f7be6c4ca607f87273d298c, type: 3}

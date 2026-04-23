@@ -10,14 +10,12 @@ public class InteractGridManager : MonoBehaviour
     [SerializeField] private float cellSize;
 
     [SerializeField] private InteractObject interactObjectPrefabs;
-    [SerializeField] private InteractObject[,] lands;
     [SerializeField] private GameObject[] interactObject;
     //
 
     public IsometricGrid<InteractObject> grid;
     void Start()
     {
-        lands = new InteractObject[width, height];
         grid = new IsometricGrid<InteractObject>(width, height, cellSize,Vector3.zero, (IsometricGrid<InteractObject> g, int x, int y) => null);
         foreach(GameObject gameObject in interactObject)
         {

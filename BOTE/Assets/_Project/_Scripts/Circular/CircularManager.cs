@@ -1,17 +1,31 @@
+using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 public class CircularManager : Singleton<CircularManager>
 {
     [SerializeField] private ItemSO[] itemSOArray;
     [SerializeField] private CircularSlot[] inventorySlots;
-    [SerializeField] private ItemData[] itemData;
+    [SerializeField] private List<ItemData> itemDatas = new();
 
     private CanvasCircular canvas;
     public ItemData currentItem;
+    [SerializeField] private ItemSO fullWateringCan;
+    [SerializeField] private ItemSO emptyWateringCan;
+
+    public event Action<ItemData> OnItemChange;
 
     void Awake()
     {
         itemSOArray = Resources.LoadAll<ItemSO>("SO/Items");
+    }
+    void OnEnable()
+    {
+        OnItemChange += SetUI;
+    }
+    private void SetUI(ItemData item)
+    {
+        canvas.SetItem(itemDatas.ToArray());
     }
     void Start()
     {
@@ -20,26 +34,135 @@ public class CircularManager : Singleton<CircularManager>
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.E))
         {
-            canvas.SetItem(itemData);
+            canvas.SetItem(itemDatas.ToArray());
             canvas.Open();
         }
-        if (Input.GetKey(KeyCode.E))
+        if (!GamePlayManager.Instance.BlockInput && Input.GetKey(KeyCode.E))
         {
             canvas.Highlight(canvas.FindSlotMouseOver());
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        if (!GamePlayManager.Instance.BlockInput && Input.GetKeyUp(KeyCode.E))
         {
-            currentItem = canvas.GetCurrentItem();
+            SetCurrentItem(canvas.GetCurrentItem());
             canvas.Close(0);
         }
     }
+    public ItemData UseItem()
+    {
+        ItemData itemData = currentItem;
+        if (currentItem.itemSO != null)
+        {
+            if (currentItem.itemSO.stackable)
+            {
+                currentItem.count--;
+                
+                if (currentItem.count <= 0)
+                {
+                    if(currentItem.itemSO == fullWateringCan)
+                    {
+                        currentItem.itemSO = emptyWateringCan;
+                        currentItem.count = 1;
+                    }
+                    else
+                    {
+                        currentItem.itemSO = null;
+                    }
+                }
+
+            }
+            else
+            {
+                
+            }
+            OnItemChange?.Invoke(currentItem);
+        }
+        return itemData;
+    }
+    public ItemData UseItem(ItemData item)
+    {
+        if (item.itemSO != null)
+        {
+            if (item.itemSO.stackable)
+            {
+                item.count--;
+                
+                if (currentItem.count <= 0)
+                {
+                    if(currentItem.itemSO == fullWateringCan)
+                    {
+                        currentItem.itemSO = emptyWateringCan;
+                        currentItem.count = 1;
+                    }
+                    else
+                    {
+                        currentItem.itemSO = null;
+                    }
+                }
+
+            }
+            else
+            {
+                
+            }
+            OnItemChange?.Invoke(currentItem);
+        }
+        return item;
+    }
+    public void ChangeItem()
+    {
+        OnItemChange?.Invoke(currentItem);
+    }
+    private void SetCurrentItem(ItemData itemData)
+    {
+        currentItem = itemData;
+        OnItemChange?.Invoke(itemData);
+    }
     public ItemSO GetRandomItem()
     {
-        int randomIndex = Random.Range(0, itemSOArray.Length);
+        int randomIndex = UnityEngine.Random.Range(0, itemSOArray.Length);
         return itemSOArray[randomIndex];
     }
+
+    public ItemData FindItem(ItemSO itemSO)
+    {
+        for (int i = 0; i < itemDatas.Count; i++)
+        {
+            if (itemDatas[i].itemSO == itemSO)
+            {
+                return itemDatas[i];
+            }
+        }
+        return null;
+    }
+    public void AddItem(ItemSO item,int count)
+    {
+        foreach(ItemData itemData in itemDatas)
+        {
+            if (itemData.itemSO == item)
+            {
+                itemData.count += count;
+                return;
+            }
+        }
+        foreach(ItemData itemData in itemDatas)
+        {
+            if (itemData.itemSO == null)
+            {
+                itemData.itemSO = item;
+                itemData.count = count;
+                return;
+            }
+        }
+        itemDatas.Add(new ItemData
+        {
+            itemSO = item,
+            count = count
+        });
+        ChangeItem();
+    }
+    /*
     public bool AddItem(ItemSO item,out int remainCount,int count = 1)
     {
         remainCount = 0;
@@ -102,6 +225,7 @@ public class CircularManager : Singleton<CircularManager>
                 count--;
                 if(count <= 0)
                 {
+                    
                     return true;
                 }
             }
@@ -109,11 +233,12 @@ public class CircularManager : Singleton<CircularManager>
         remainCount = count;
         return false;
     }
-    // public void SpawnItem(ItemSO item, CircularSlot slot, int count = 1)
-    // {
-    //     CircularItem newItem = Instantiate(inventoryItemPrefab, slot.transform);
-    //     newItem.InitializeItem(item,slot,count);
-    // }
+    public void SpawnItem(ItemSO item, CircularSlot slot, int count = 1)
+    {
+        CircularItem newItem = Instantiate(inventoryItemPrefab, slot.transform);
+        newItem.InitializeItem(item,slot,count);
+    }
+    */
   
     public void InitInventorySlot(CircularSlot[] inventorySlots)
     {

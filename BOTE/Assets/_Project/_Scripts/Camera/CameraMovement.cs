@@ -64,11 +64,13 @@ public class CameraMovement : MonoBehaviour
     }
     public void GameInput_OnDragAction(object sender, System.EventArgs e)
     {
+        if(GamePlayManager.Instance.BlockInput) return;
         _origin = GetMousePosition;
         _isDragging = true;
     }
     public void GameInput_EndDragAction(object sender, System.EventArgs e)
     {
+        if(GamePlayManager.Instance.BlockInput) return;
         _isDragging = false;
     }
     private void LateUpdate()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,12 @@ public class House : MonoBehaviour,IInteractable
 
     Vector2Int IInteractable.position => position;
 
-    public void Interact(ItemData currentItem)
+    public bool Interact(ItemData currentItem, out bool isItemChanged)
     {
-        Debug.Log("House");
+        UIManager.Instance.OpenUI<CanvasHouse>();
+        isItemChanged = false;
+        return false;
     }
+
+  
 }

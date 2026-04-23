@@ -81,7 +81,7 @@ public class PlayerPathFinding : MonoBehaviour
         //         Instantiate(wall, gridObject.ReturnPathPosition(), Quaternion.identity);
         //     }
         // }
-        if (Input.GetMouseButtonDown(0))
+        if (!GamePlayManager.Instance.BlockInput && Input.GetMouseButtonDown(0))
         {
             if (gridObject != null)
             {

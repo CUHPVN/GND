@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 735ae57965ee5f74da26add84a054474, type: 3}
-  m_Name: Axe
+  m_Name: Wheat
   m_EditorClassIdentifier: 
   tileBase: {fileID: 0}
-  itemType: 6
-  actionType: 1
-  range: {x: 5, y: 4}
-  stackable: 0
-  maxStack: 1
-  image: {fileID: 21300000, guid: 1e853a4a3f1002f4a98b5bc54e7ff8bd, type: 3}
+  itemType: 16
+  actionType: 0
+  range: {x: 0, y: 0}
+  stackable: 1
+  maxStack: 999
+  image: {fileID: 21300000, guid: 8af91a0a001fa56439894d7029811101, type: 3}

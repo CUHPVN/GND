@@ -373,8 +373,17 @@ namespace HisaGames.Cutscene
                 else
                 {
                     Debug.Log("Cutscene finished");
-                    EcCutsceneManager.instance.closeCutscenes();
                     isPlaying = false;
+
+                    if (EcCutsceneManager.instance.HasNextCutscene())
+                    {
+                        EcCutsceneManager.instance.PlayNextGroupCutScene();
+                    }
+                    else
+                    {
+                        EcCutsceneManager.instance.closeCutscenes();
+                    }
+
                 }
             }
             else

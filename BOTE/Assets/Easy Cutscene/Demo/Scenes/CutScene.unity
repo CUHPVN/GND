@@ -490,6 +490,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617611288}
   m_CullTransparentMesh: 1
+--- !u!1 &1216841908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216841909}
+  - component: {fileID: 1216841910}
+  m_Layer: 0
+  m_Name: EcCutscene1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216841909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216841908}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460095016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216841910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216841908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c4a232f1b87b04ba7fa5d4567b9b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneData:
+  - name: "t\xE9t"
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: moichan
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 71180893}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    autoNext: 1
+  - name: "t\xE9t"
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: ???????/
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 0
+  currentID: 1
+  charaNameText: {fileID: 1460095018}
+  chatText: {fileID: 1460095017}
 --- !u!1 &1313598362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,7 +1252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[15].cutscenePostEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[16].cutscenePostEvent.m_PersistentCalls.m_Calls.Array.size
@@ -1381,7 +1465,7 @@ PrefabInstance:
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[15].cutscenePostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1816216357}
+      objectReference: {fileID: 468853553}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[15].cutscenePostEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1959,6 +2043,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: currentCutsceneIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: cutscenes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: cutscenes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1216841910}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: characterPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 8370138464466514807, guid: 040572844838149409ea23ae417577bc, type: 3}
@@ -1968,7 +2064,10 @@ PrefabInstance:
       objectReference: {fileID: 1700114143301298587, guid: 792d30334bef0054ab0468c66b189c5b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1216841909}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
 --- !u!4 &1460095016 stripped

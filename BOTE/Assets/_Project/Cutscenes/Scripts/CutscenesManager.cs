@@ -10,11 +10,7 @@ public class CutsceneManagers : MonoBehaviour
 
     public void Start()
     {
-        if (cutscene != null)
-        {
-            cutscene.gameObject.SetActive(false);
-            background.SetActive(false);
-        }
+        Activate();
     }
 
     public void Activate()

@@ -2,12 +2,10 @@ version=1
 
 # This file caches language service data to improve the performance of C# Dev Kit.
 # It is not intended for manual editing. It can safely be deleted and will be
-# regenerated automatically.
+# regenerated automatically. For more information, see https://aka.ms/lscache
 #
-# To exclude from version control, add *.lscache to your .gitignore file.
-#
-# To disable caching, add the following to your VS Code settings:
-#   "dotnet.projectsystem.enableLanguageServiceCache": false
+# To control where cache files are stored, use the following VS Code setting:
+#   "dotnet.projectsystem.cacheInProjectFolder": true
 
 [project]
 language=C#
@@ -89,23 +87,44 @@ Assets/
   GameInput.cs
   Globals.cs
   SetWorldBounds.cs
+ _Project/_Scripts/Circular/
+  CircularItem.cs
+  CircularManager.cs
+  CircularSlot.cs
+  ItemData.cs
+ _Project/_Scripts/Core/
+  Boots.cs
+  GamePlayManager.cs
+ _Project/_Scripts/Farm/
+  FarmLand.cs
+  Plant/
+   Plant.cs
+   PlantSO.cs
+   SeedToPlantConfigSO.cs
+ _Project/_Scripts/Grid/
+  FarmGridManager.cs
+  Grid.cs
+  InteractGridManager.cs
+  PathFinding/
+   PathFinding.cs
+   PathNode.cs
+  PlayerPathFinding.cs
+ _Project/_Scripts/Interact/
+  House.cs
+  IInteractable.cs
+  InteractObject.cs
+  Well.cs
+ _Project/_Scripts/Inventory/
+  InventoryItem.cs
+  InventoryManager.cs
+  InventorySlot.cs
+  ItemSO.cs
  _Project/_Scripts/
-  Farm/FarmLand.cs
-  Grid/
-   Grid.cs
-   GridManager.cs
-   PathFinding/
-    PathFinding.cs
-    PathNode.cs
-   PlayerPathFinding.cs
-  Inventory/
-   InventoryItem.cs
-   InventoryManager.cs
-   InventorySlot.cs
-   ItemSO.cs
   Player/PlayerController.cs
   UI/
+   CanvasCircular.cs
    CanvasGamePlay.cs
+   CanvasHouse.cs
    CanvasInventory.cs
    CanvasMainMenu.cs
    PopUpUI.cs

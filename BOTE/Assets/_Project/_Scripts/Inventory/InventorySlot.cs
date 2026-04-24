@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ public class InventorySlot : MonoBehaviour , IDropHandler
     [Header("InventoryRoot")]
     [SerializeField] private Transform InventoryRoot;
     [SerializeField] private Image slotImage;
+    public Transform itemHandle;
     
     public void SetRoot(Transform root)
     {

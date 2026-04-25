@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HisaGames.CutsceneManager;
+using UnityEngine.UI;
 
 
 namespace HisaGames.Character
@@ -25,7 +26,7 @@ namespace HisaGames.Character
         [Header("Sprite Settings")]
         [HideInInspector]
         [Tooltip("SpriteRenderer component for displaying character sprites.")]
-        public SpriteRenderer spriteRenderer;
+        public Image image;
 
         [Tooltip("Array of sprites used for the character.")]
         public Sprite[] spriteImages;
@@ -43,7 +44,7 @@ namespace HisaGames.Character
             }
 
             // Get the sprite renderer component
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            image = GetComponentInChildren<Image>();
         }
 
         /// <summary>
@@ -52,11 +53,11 @@ namespace HisaGames.Character
         /// <param name="spriteName">Name of the sprite to change to.</param>
         public void ChangeSpriteByName(string spriteName)
         {
-            if (spriteRenderer != null)
+            if (image != null)
             {
                 if (spriteDictionary.TryGetValue(spriteName, out var newSprite))
                 {
-                    spriteRenderer.sprite = newSprite;
+                    image.sprite = newSprite;
                 }
                 else
                 {
@@ -79,9 +80,9 @@ namespace HisaGames.Character
             switch (characterState)
             {
                 case CharacterState.Moving:
-                    transform.position = Vector3.MoveTowards(transform.position, targetMovePosition, step);
+                    transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetMovePosition, step);
 
-                    if (targetMovePosition == transform.position)
+                    if (targetMovePosition == transform.localPosition)
                     {
                         characterState = CharacterState.StayInScene;
                         Debug.Log("Play StayInScene");
@@ -101,7 +102,7 @@ namespace HisaGames.Character
         public void SetCharacterMove(Vector3 targetPosition, Vector3 targetRotation, Vector3 targetScale)
         {
             targetMovePosition = targetPosition;
-            if (transform.position != targetMovePosition)
+            if (transform.localPosition != targetMovePosition)
             {
                 characterState = CharacterState.Moving;
                 Debug.Log("Play Moving");

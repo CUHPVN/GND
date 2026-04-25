@@ -248,7 +248,7 @@ namespace HisaGames.Cutscene
                             //Checking & Setting Initial Transform Position, Rotation, Scale Config
                             character.transform.localRotation = Quaternion.Euler(charaInitialTransform.rotation);
                             character.transform.localScale = charaInitialTransform.scale;
-                            character.transform.position = charaInitialTransform.position;
+                            character.transform.localPosition = charaInitialTransform.position;
 
                             //Checking & Setting Final Transform Position, Rotation, Scale Config
                             if (charaFinalTransform != null)
@@ -272,9 +272,12 @@ namespace HisaGames.Cutscene
                         character.ChangeSpriteByName(tempCharaData.spriteString);
 
                     if (character.name == cutsceneData[currentID].nameString)
-                        character.spriteRenderer.color = Color.white; //set character sprite normal
+                    {
+                        character.image.color = Color.white; //set character sprite normal
+                    }
+
                     else
-                        character.spriteRenderer.color = Color.gray; //set character sprite normal
+                        character.image.color = Color.gray; //set character sprite normal
                                                                      //-----------------------------------------------------------------------
                 }
                 else

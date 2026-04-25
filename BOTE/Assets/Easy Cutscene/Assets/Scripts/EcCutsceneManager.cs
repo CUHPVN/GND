@@ -42,6 +42,7 @@ namespace HisaGames.CutsceneManager
         [Header("Other Settings")]
         [Tooltip("Panel that contains gui elements such as character, props and others.")]
         [SerializeField] GameObject guiPanel;
+        [SerializeField] Transform up;
 
         [Tooltip("Timer for auto-playing the next cutscene. Set to 0 to disable auto-play.")]
         public float autoplayTime;
@@ -70,7 +71,8 @@ namespace HisaGames.CutsceneManager
             {
                 GameObject temp = Instantiate(characterPrefabs[i]);
                 temp.name = temp.name.Replace("(Clone)", "");
-                temp.transform.SetParent(guiPanel.transform);
+                temp.transform.SetParent(up);
+                temp.transform.localPosition = Vector3.zero;
                 characters[i] = temp.GetComponent<EcCharacter>();
             }
         }

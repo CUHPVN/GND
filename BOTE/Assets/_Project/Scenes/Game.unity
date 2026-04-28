@@ -29696,16 +29696,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 402b20a9c78534b44b2f50a20cdcefc7, type: 3}
     - target: {fileID: 6574975662692086983, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1882.1973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574975662692086983, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 292.7759
+      value: 280.7168
       objectReference: {fileID: 0}
     - target: {fileID: 6574975662692086983, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -31
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 6574975662692086983, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -390
+      value: -393.0143
       objectReference: {fileID: 0}
     - target: {fileID: 6574975662911132174, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_FontData.m_Font
@@ -29713,15 +29717,19 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     - target: {fileID: 6574975662911132175, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2931.839
+      value: 2853.0242
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574975662911132175, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 436.0107
       objectReference: {fileID: 0}
     - target: {fileID: 6574975662911132175, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 17.373901
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6574975662911132175, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -28
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359397, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_Icon
@@ -29988,7 +29996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[0].charactersData.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663053359403, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutsceneData.Array.data[1].charactersData.Array.size
@@ -30938,6 +30946,14 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    - target: {fileID: 6574975663169123870, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574975663169123871, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000011444
+      objectReference: {fileID: 0}
     - target: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -31196,11 +31212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574975664442010484, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -604.02435
+      value: -455
       objectReference: {fileID: 0}
     - target: {fileID: 6574975664442010484, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -196.06995
+      value: -183
       objectReference: {fileID: 0}
     - target: {fileID: 6574975664442010490, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: m_Type
@@ -31662,7 +31678,7 @@ MonoBehaviour:
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 409461358}
+        - m_Target: {fileID: 1101186091}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -31881,6 +31897,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1068229715}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
     autoNext: 1
   currentID: 5
@@ -32559,7 +32587,19 @@ MonoBehaviour:
         m_Calls: []
     cutscenePostEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1458731310}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     autoNext: 1
   - name: 
     charactersData: []
@@ -34484,6 +34524,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1068229715}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
     autoNext: 1
   currentID: 0
@@ -173530,7 +173582,19 @@ MonoBehaviour:
         m_Calls: []
     cutscenePostEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1568066565}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     autoNext: 1
   currentID: 6
   charaNameText: {fileID: 1230360652}

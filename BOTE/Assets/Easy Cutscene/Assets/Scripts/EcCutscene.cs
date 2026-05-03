@@ -376,8 +376,7 @@ namespace HisaGames.Cutscene
                 else
                 {
                     Debug.Log("Cutscene finished");
-                    isPlaying = false;
-
+                    AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement(name));
                     if (EcCutsceneManager.instance.HasNextCutscene())
                     {
                         EcCutsceneManager.instance.PlayNextGroupCutScene();
@@ -394,6 +393,30 @@ namespace HisaGames.Cutscene
                 chatText.text = chatTextString;
                 startTyping = false;
                 typingTimer = 0;
+            }
+        }
+        public void PlayNextCutsceneWithAchievement()
+        {
+            InvokePostEvent();
+            if (currentID < cutsceneData.Length - 1)
+            {
+                currentID += 1;
+                autoplayTime = EcCutsceneManager.instance.autoplayTime;
+                PlayCutscene();
+            }
+            else
+            {
+                Debug.Log("Cutscene finished");
+                AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement(name));
+                if (EcCutsceneManager.instance.HasNextCutscene())
+                {
+                    EcCutsceneManager.instance.PlayNextGroupCutScene();
+                }
+                else
+                {
+                    EcCutsceneManager.instance.closeCutscenes();
+                }
+
             }
         }
 

@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(MoveToCache(remainTime));
         }
         moveCor = StartCoroutine(MoveStepByStep(vector,pos));
-        
+        AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("first_move"));
         return true;
     }
     private IEnumerator MoveStepByStep(Vector2[] vector,Vector2Int[] pos)
@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
         InteractObject interactObject = interactGridManager.grid.GetGridObject(playerPosition);
         if (farmLand != null)
         {
+            AchievementManager.Instance.TriggerAchievement("stand_on_farmland");
             ShowInteract();
             if (!GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.F))
             {

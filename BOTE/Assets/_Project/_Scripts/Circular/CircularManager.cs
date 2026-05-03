@@ -12,6 +12,7 @@ public class CircularManager : Singleton<CircularManager>
     public ItemData currentItem;
     [SerializeField] private ItemSO fullWateringCan;
     [SerializeField] private ItemSO emptyWateringCan;
+    [SerializeField] private ItemSO hoe;
 
     public event Action<ItemData> OnItemChange;
 
@@ -117,6 +118,10 @@ public class CircularManager : Singleton<CircularManager>
     private void SetCurrentItem(ItemData itemData)
     {
         currentItem = itemData;
+        if(itemData.itemSO == hoe)
+        {
+            AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("equip_hoe"));
+        }
         OnItemChange?.Invoke(itemData);
     }
     public ItemSO GetRandomItem()

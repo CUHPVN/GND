@@ -187,6 +187,10 @@ namespace HisaGames.CutsceneManager
         {
             cutscenes[currentCutsceneIndex].PlayNextCutscene();
         }
+        public void PlayNextCutsceneWithAchievement()
+        {
+            cutscenes[currentCutsceneIndex].PlayNextCutsceneWithAchievement();
+        }
 
         public bool HasNextCutscene()
         {

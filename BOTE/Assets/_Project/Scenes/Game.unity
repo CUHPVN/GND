@@ -34425,15 +34425,17 @@ MonoBehaviour:
       spriteString: Silas-Vui
     propsData: []
     nameString: Silas
-    chatString: "Click chu\u1ED9t tr\xE1i \u0111\u1EC3 di chuy\u1EC3n, gi\u1EEF v\xE0
-      k\xE9o chu\u1ED9t ph\u1EA3i \u0111\u1EC3 di chuy\u1EC3n camera. "
+    chatString: "Gi\u1EEF v\xE0 k\xE9o chu\u1ED9t ph\u1EA3i \u0111\u1EC3 di chuy\u1EC3n
+      camera, s\u1EED d\u1EE5ng con l\u0103n \u0111\u1EC3 zoom. Click chu\u1ED9t
+      tr\xE1i v\xE0o \xF4 \u0111\u01B0\u1EE3c \u0111\xE1nh d\u1EA5u \u0111\u1EC3
+      di chuy\u1EC3n."
     cutscenePreEvent:
       m_PersistentCalls:
         m_Calls: []
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls: []
-    autoNext: 1
+    autoNext: 0
   - name: 
     charactersData:
     - name: Silas
@@ -34450,7 +34452,7 @@ MonoBehaviour:
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls: []
-    autoNext: 1
+    autoNext: 0
   - name: 
     charactersData: []
     propsData: []
@@ -34463,7 +34465,7 @@ MonoBehaviour:
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls: []
-    autoNext: 1
+    autoNext: 0
   - name: 
     charactersData: []
     propsData: []
@@ -34481,7 +34483,8 @@ MonoBehaviour:
     charactersData: []
     propsData: []
     nameString: Silas
-    chatString: "Di chuy\u1EC3n \u0111\u1EBFn gi\u1EBFng v\xE0 l\u1EA5y n\u01B0\u1EDBc"
+    chatString: "Di chuy\u1EC3n \u0111\u1EBFn gi\u1EBFng v\xE0 l\u1EA5y n\u01B0\u1EDBc
+      b\u1EB1ng b\xECnh t\u01B0\u1EDBi"
     cutscenePreEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -34493,7 +34496,8 @@ MonoBehaviour:
     charactersData: []
     propsData: []
     nameString: Silas
-    chatString: "L\xE0m \u01B0\u1EDBt \xF4 \u0111\u1EA5t r\u1ED3i gieo h\u1EA1t"
+    chatString: "T\u01B0\u1EDBi n\u01B0\u1EDBc l\xEAn \xF4 \u0111\u1EA5t \u0111\xE3
+      cu\u1ED1c r\u1ED3i gieo h\u1EA1t b\u1EB1ng h\u1EA1t gi\u1ED1ng b\u1EA5t k\u1EF3."
     cutscenePreEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -171413,7 +171417,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1001 &1740306881
 PrefabInstance:
@@ -172002,6 +172006,8 @@ GameObject:
   - component: {fileID: 1782519387}
   - component: {fileID: 1782519388}
   - component: {fileID: 1782519389}
+  - component: {fileID: 1782519390}
+  - component: {fileID: 1782519391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -172089,6 +172095,7 @@ MonoBehaviour:
     count: 0
   fullWateringCan: {fileID: 11400000, guid: 0a5670e33f08ac0439978e294673ea88, type: 2}
   emptyWateringCan: {fileID: 11400000, guid: 548736709db38ef44a5e7bbe59cfc9d2, type: 2}
+  hoe: {fileID: 11400000, guid: 1bc4f1673545be64d8f3967e37aff238, type: 2}
 --- !u!114 &1782519389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172102,6 +172109,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlockInput: 0
+--- !u!114 &1782519390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782519383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8deea3bb56d660143b7e7b4689130f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1782519391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782519383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb40f77cf863ac94a9e1f03996a405c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allAchievements: []
 --- !u!1001 &1786828629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172221,7 +172253,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eb80301de695789429d0cb65277c7013, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d49b76f59d224440a8b14e182016b6e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -172433,7 +172465,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1819249806
 RectTransform:
@@ -173157,7 +173189,7 @@ GameObject:
   - component: {fileID: 1914857900}
   - component: {fileID: 1914857899}
   m_Layer: 0
-  m_Name: Silas x phandien
+  m_Name: Silasxphandien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

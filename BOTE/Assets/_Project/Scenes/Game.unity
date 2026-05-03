@@ -4760,7 +4760,7 @@ MonoBehaviour:
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1266327598}
+        - m_Target: {fileID: 317634871}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -5049,7 +5049,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1791032387}
+        - m_Target: {fileID: 1458731310}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -5059,7 +5059,19 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1266327598}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
     autoNext: 1
   currentID: 2
@@ -31017,15 +31029,15 @@ PrefabInstance:
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[0]
       value: 
-      objectReference: {fileID: 1712477904}
+      objectReference: {fileID: 882632418}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[1]
       value: 
-      objectReference: {fileID: 882632418}
+      objectReference: {fileID: 633245011}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[2]
       value: 
-      objectReference: {fileID: 633245011}
+      objectReference: {fileID: 1712477904}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[3]
       value: 
@@ -31226,11 +31238,11 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 1712477905}
+      insertIndex: 1
+      addedObject: {fileID: 633245012}
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 633245012}
+      addedObject: {fileID: 1712477905}
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 3
       addedObject: {fileID: 1269113670}
@@ -32587,19 +32599,7 @@ MonoBehaviour:
         m_Calls: []
     cutscenePostEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1458731310}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     autoNext: 1
   - name: 
     charactersData: []
@@ -34513,18 +34513,6 @@ MonoBehaviour:
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 317634871}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 1068229715}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -34536,6 +34524,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1791032387}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
     autoNext: 1
   currentID: 0
@@ -171349,8 +171349,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507c77f5fbec5fb4a9e231e2c97ea8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 1712477904}
+  cutscene: {fileID: 882632418}
   background: {fileID: 1819249802}
+  intro: {fileID: 317634871}
 --- !u!114 &1733180035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172505,7 +172506,7 @@ MonoBehaviour:
     charactersData: []
     propsData: []
     nameString: 
-    chatString: "c\xF3 m\u1ED9t \xF4ng l\xE3o v\u1EABn c\xF2n gi\u1EEF nh\u1EEFng
+    chatString: "C\xF3 m\u1ED9t \xF4ng l\xE3o v\u1EABn c\xF2n gi\u1EEF nh\u1EEFng
       th\u1EE9 thu\u1ED9c v\u1EC1 \u201Cng\xE0y x\u01B0a\u201D."
     cutscenePreEvent:
       m_PersistentCalls:

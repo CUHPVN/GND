@@ -5,6 +5,7 @@ public class CutsceneManagers : MonoBehaviour
 {
     public EcCutscene cutscene;
     public GameObject background;
+    public GameObject intro;
 
     private bool isOn = false;
 
@@ -21,6 +22,7 @@ public class CutsceneManagers : MonoBehaviour
 
         cutscene.gameObject.SetActive(true);
         background.SetActive(true);
+        intro.SetActive(true);
         cutscene.StartCutscene();
     }
 

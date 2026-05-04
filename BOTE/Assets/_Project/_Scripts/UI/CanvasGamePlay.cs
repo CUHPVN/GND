@@ -6,9 +6,19 @@ public class CanvasGamePlay : UICanvas
 {
     [SerializeField] private Image currentImage;
     [SerializeField] private TMP_Text currentText;
+    [SerializeField] private TMP_Text moneyText;
+    [SerializeField] private TMP_Text dayText;
     private void OnEnable()
     {
         CircularManager.Instance.OnItemChange += OnItemChange;
+        GamePlayManager.Instance.OnDayChange += OnDayChange;
+        GamePlayManager.Instance.OnMoneyChange += OnMoneyChange;
+    }
+    private void OnDisable()
+    {
+        CircularManager.Instance.OnItemChange -= OnItemChange;
+        GamePlayManager.Instance.OnDayChange -= OnDayChange;
+        GamePlayManager.Instance.OnMoneyChange -= OnMoneyChange;
     }
 
     private void OnItemChange(ItemData data)
@@ -32,6 +42,14 @@ public class CanvasGamePlay : UICanvas
             currentImage.sprite = null;
             currentText.text = "";
         }
+    }
+    private void OnDayChange(int day)
+    {
+        dayText.text = "Day " + day.ToString();
+    }
+    private void OnMoneyChange(int money)
+    {
+        moneyText.text = money.ToString();
     }
 
 

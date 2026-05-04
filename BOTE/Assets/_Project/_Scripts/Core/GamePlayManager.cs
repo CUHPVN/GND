@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GamePlayManager : Singleton<GamePlayManager>
 {
@@ -31,7 +32,11 @@ public class GamePlayManager : Singleton<GamePlayManager>
     {
         
     }
-
+    public void AddMoney(int money)
+    {
+        this.money += money;
+        OnMoneyChange?.Invoke(money);
+    }
     public void NextDay()
     {
         if(!AchievementManager.Instance.IsCompleted("open_house")) return;

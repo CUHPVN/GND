@@ -19,6 +19,10 @@ public class ItemSO : ScriptableObject
     [Header("Both")]
     public Sprite image;
     
+    [Header("Shop")]
+    public bool sellable;
+    public int price;
+    public string description;
 }
 public enum ItemType
 {

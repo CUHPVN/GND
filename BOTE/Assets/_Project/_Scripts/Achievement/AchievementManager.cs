@@ -97,7 +97,7 @@ public class AchievementManager : Singleton<AchievementManager>
         }
         else
         {
-            Debug.LogError($"[Achievement]: {id} không tồn tại");
+            Debug.LogWarning($"[Achievement]: {id} không tồn tại");
             return null;
         }
     }

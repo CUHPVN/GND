@@ -19,3 +19,6 @@ MonoBehaviour:
   stackable: 1
   maxStack: 999
   image: {fileID: 1701973984, guid: 9533ea348b887f143b1b5348d4a08e6e, type: 3}
+  sellable: 0
+  price: 4
+  description: 

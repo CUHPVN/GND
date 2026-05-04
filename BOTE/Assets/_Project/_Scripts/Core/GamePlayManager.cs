@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GamePlayManager : Singleton<GamePlayManager>
 {
-    private int money=0;
+    private int money=10;
     private int health=100;
     private int day=1;
 
@@ -25,7 +25,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
     }
     void Start()
     {
-        
+        OnMoneyChange?.Invoke(money);
+        OnDayChange?.Invoke(day);
+        OnHealthChange?.Invoke(health);
     }
 
     void Update()
@@ -35,7 +37,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     public void AddMoney(int money)
     {
         this.money += money;
-        OnMoneyChange?.Invoke(money);
+        OnMoneyChange?.Invoke(this.money);
     }
     public void NextDay()
     {

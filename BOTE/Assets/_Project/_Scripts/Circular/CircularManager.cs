@@ -7,7 +7,7 @@ public class CircularManager : Singleton<CircularManager>
     [SerializeField] private ItemSO[] itemSOArray;
     [SerializeField] private CircularSlot[] inventorySlots;
     [SerializeField] private List<ItemData> itemDatas = new();
-
+    public List<ItemData> ItemDatas => itemDatas;
     private CanvasCircular canvas;
     public ItemData currentItem;
     [SerializeField] private ItemSO fullWateringCan;
@@ -49,6 +49,20 @@ public class CircularManager : Singleton<CircularManager>
             SetCurrentItem(canvas.GetCurrentItem());
             canvas.Close(0);
         }
+    }
+    public bool SellItem(ItemData itemData)
+    {
+        if (itemDatas.Contains(itemData))
+        {
+            itemData.count--;
+            if (itemData.count <= 0)
+            {
+                itemData.itemSO = null;
+            }
+            OnItemChange?.Invoke(currentItem);
+            return true;
+        }
+        return false;
     }
     public ItemData UseItem()
     {

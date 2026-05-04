@@ -116,6 +116,7 @@ Assets/
     PathNode.cs
    PlayerPathFinding.cs
   _Scripts/Interact/
+   Barnaby.cs
    House.cs
    IInteractable.cs
    InteractObject.cs
@@ -127,8 +128,11 @@ Assets/
    ItemSO.cs
   _Scripts/
    Player/PlayerController.cs
+   Shop/ShopItemSlot.cs
    UI/
+    CanvasBarnaby.cs
     CanvasCircular.cs
+    CanvasCutscene.cs
     CanvasGamePlay.cs
     CanvasHouse.cs
     CanvasInventory.cs

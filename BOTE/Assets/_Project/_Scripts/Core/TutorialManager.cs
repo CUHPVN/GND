@@ -1,6 +1,7 @@
 using System;
 using HisaGames.Cutscene;
 using HisaGames.CutsceneManager;
+using Unity.VisualScripting;
 using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class TutorialManager : MonoBehaviour
     private void NextCutscene()
     {
         Debug.Log("NextCutscene");
+        if(EcCutsceneManager.instance==null) return;
         EcCutsceneManager.instance.PlayNextCutsceneWithAchievement();
     }
 }

@@ -28,7 +28,7 @@ public class CanvasBarnaby : UICanvas
     public override void Open()
     {
         base.Open();
-        GamePlayManager.Instance.BlockInput = true;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = true;
         LoadInventory();
         LoadShop();
         HideSelected();
@@ -40,6 +40,7 @@ public class CanvasBarnaby : UICanvas
             Destroy(button.gameObject);
         }
         inventorySlots.Clear();
+        if(CircularManager.Instance == null) return;
         foreach (ItemData itemData in CircularManager.Instance.ItemDatas)
         {
             if(itemData.itemSO == null) continue;
@@ -112,6 +113,7 @@ public class CanvasBarnaby : UICanvas
     {
         if (selectedItem == null) return false;
         if(selectedItem.itemData.itemSO == null) return false;
+        if(CircularManager.Instance == null || GamePlayManager.Instance == null) return false;
         int price = selectedItem.itemData.itemSO.price;
         if (CircularManager.Instance.SellItem(selectedItem.itemData))
         {
@@ -124,6 +126,7 @@ public class CanvasBarnaby : UICanvas
     {
         if (selectedItem == null) return false;
         if (selectedItem.itemData.itemSO == null) return false;
+        if(GamePlayManager.Instance == null || CircularManager.Instance == null) return false;
         int price = selectedItem.itemData.itemSO.price;
         if (GamePlayManager.Instance.Money < price) return false;
         GamePlayManager.Instance.AddMoney(-price);
@@ -164,19 +167,19 @@ public class CanvasBarnaby : UICanvas
     }
     public void InitEvent()
     {
-        GamePlayManager.Instance.OnMoneyChange+=SetCoinText;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnMoneyChange+=SetCoinText;
         interactButton.onClick.AddListener(() => TryInteract());
         closeButton.onClick.AddListener(() => CloseButton());
     }
     public void OnDestroy()
     {
-        GamePlayManager.Instance.OnMoneyChange-=SetCoinText;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnMoneyChange-=SetCoinText;
         interactButton.onClick.RemoveListener(TryInteract);
         closeButton.onClick.RemoveListener(CloseButton);
     }
     public override void CloseDirectly()
     {
-        GamePlayManager.Instance.BlockInput = false;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = false;
         base.CloseDirectly();
     }
 

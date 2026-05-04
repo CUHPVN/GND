@@ -12,7 +12,7 @@ public class CanvasInventory : UICanvas
     }
     private void Awake()
     {
-        InitInventorySlot();
+        if(InventoryManager.Instance != null) InitInventorySlot();
     }
     private void OnEnable()
     {
@@ -35,6 +35,7 @@ public class CanvasInventory : UICanvas
     }
     private void AddItem()
     {
+        if(InventoryManager.Instance == null) return;
         int remainCount=0;
         bool added = InventoryManager.Instance.AddItem(InventoryManager.Instance.GetRandomItem(), out remainCount);
         if (!added)
@@ -47,6 +48,7 @@ public class CanvasInventory : UICanvas
     }
     private void AddItemRandomCount()
     {
+        if(InventoryManager.Instance == null) return;
         int remainCount=0;
         ItemSO item = InventoryManager.Instance.GetRandomItem(); 
         bool added = InventoryManager.Instance.AddItem(item, out remainCount,item.stackable?Random.Range(1, 5):1);

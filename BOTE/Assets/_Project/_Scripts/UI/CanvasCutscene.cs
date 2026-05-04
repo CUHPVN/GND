@@ -18,12 +18,12 @@ public class CanvasCutscene : UICanvas
     public void TurnOnCutscene()
     {
         background.SetActive(true);
-        EcCutsceneManager.instance.gameObject.SetActive(true);
+        if(EcCutsceneManager.instance != null) EcCutsceneManager.instance.gameObject.SetActive(true);
     }
 
     public void TurnOffCutscene()
     {
         background.SetActive(false);
-        EcCutsceneManager.instance.gameObject.SetActive(false);
+        if(EcCutsceneManager.instance != null) EcCutsceneManager.instance.gameObject.SetActive(false);
     }
 }

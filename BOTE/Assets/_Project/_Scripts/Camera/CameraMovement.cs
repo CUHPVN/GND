@@ -64,13 +64,15 @@ public class CameraMovement : MonoBehaviour
     }
     public void GameInput_OnDragAction(object sender, System.EventArgs e)
     {
+        if(GamePlayManager.Instance == null) return;
         if(GamePlayManager.Instance.BlockInput) return;
         _origin = GetMousePosition;
         _isDragging = true;
-        AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("first_drag"));
+        if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("first_drag"));
     }
     public void GameInput_EndDragAction(object sender, System.EventArgs e)
     {
+        if(GamePlayManager.Instance == null) return;
         if(GamePlayManager.Instance.BlockInput) return;
         _isDragging = false;
     }

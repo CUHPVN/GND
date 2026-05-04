@@ -23,7 +23,7 @@ public class CanvasCircular : UICanvas
     }
     private void Awake()
     {
-        InitInventorySlot();
+        if(CircularManager.Instance != null) InitInventorySlot();
     }
     private void OnEnable()
     {

@@ -532,6 +532,153 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyOnClose: 0
   background: {fileID: 0}
+--- !u!1 &1283521155456713886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8644493357824207557}
+  - component: {fileID: 9090956772023839979}
+  m_Layer: 0
+  m_Name: TuoiCay2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8644493357824207557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283521155456713886}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4855371259043908324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9090956772023839979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283521155456713886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c4a232f1b87b04ba7fa5d4567b9b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneData:
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ta c\u1EA7n ti\u1EBFp t\u1EE5c l\xE0m vi\u1EC7c \u0111\u1EC3 c\xE2y
+      tr\u1ED3ng c\xF3 th\u1EC3 l\u1EDBn nhanh nh\u1EA5t c\xF3 th\u1EC3"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  currentID: 0
+  charaNameText: {fileID: 0}
+  chatText: {fileID: 0}
+--- !u!1 &1992951561856025254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2497122250361144578}
+  - component: {fileID: 965971690973370650}
+  m_Layer: 0
+  m_Name: TuoiCay1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2497122250361144578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992951561856025254}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4855371259043908324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &965971690973370650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992951561856025254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c4a232f1b87b04ba7fa5d4567b9b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneData:
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: Silas
+    chatString: "Nh\u1EEFng m\u1EA7m c\xE2y c\u1EA7n n\u01B0\u1EDBc \u0111\u1EC3
+      ph\xE1t tri\u1EC3n, ta n\xEAn t\u01B0\u1EDBi cho ch\xFAng m\u1ED7i ng\xE0y."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: Silas
+    chatString: "\u0110\u1EC3 c\xF3 th\u1EC3 ki\u1EBFm \u0111\u1EE7 ti\u1EC1n, ta
+      c\u1EA7n ph\u1EA3i tr\u1ED3ng th\u1EADt nhi\u1EC1u h\u1EA1t gi\u1ED1ng."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    autoNext: 1
+  currentID: 4
+  charaNameText: {fileID: 0}
+  chatText: {fileID: 0}
 --- !u!1 &2402811156496594548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1473,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4855371258757857374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7247735692672494755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7618673724439498827}
+  - component: {fileID: 4719944443683716113}
+  m_Layer: 0
+  m_Name: BanHang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7618673724439498827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247735692672494755}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4855371259043908324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4719944443683716113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247735692672494755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c4a232f1b87b04ba7fa5d4567b9b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneData:
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "C\xE2y tr\u1ED3ng c\xF3 v\u1EBB nh\u01B0 \u0111\xE3 \u0111\u1EBFn
+      l\xFAc thu ho\u1EA1ch!"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Di chuy\u1EC3n l\u1EA1i g\u1EA7n c\xE1c c\xE2y tr\u1ED3ng \u0111\xE3
+      l\u1EDBn v\xE0 thu ho\u1EA1ch ch\xFAng b\u1EB1ng c\xE1ch \u1EA5n ph\xEDm [F]"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "Ti\u1EBFp theo h\xE3y xem xem l\xE3o Barnaby h\xF4m nay trao \u0111\u1ED5i
+      c\xE1i g\xEC th\xF4i!"
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    autoNext: 1
+  - name: 
+    charactersData: []
+    propsData: []
+    nameString: 
+    chatString: "H\xE3y di chuy\u1EC3n l\u1EA1i khu v\u1EF1c bu\xF4n b\xE1n c\u1EE7a
+      l\xE3o Barnaby v\xE0 t\u01B0\u01A1ng t\xE1c \u0111\u1EC3 b\xE1n v\xE0 mua h\u1EA1t
+      gi\u1ED1ng."
+    cutscenePreEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    cutscenePostEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    autoNext: 1
+  currentID: 6
+  charaNameText: {fileID: 0}
+  chatText: {fileID: 0}
 --- !u!1 &7907244157145696672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,12 +3781,21 @@ PrefabInstance:
       addedObject: {fileID: 740657175827235029}
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 5813090314858306934}
+      addedObject: {fileID: 2497122250361144578}
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 5
-      addedObject: {fileID: 45645392178134319}
+      addedObject: {fileID: 5813090314858306934}
     - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 6
+      addedObject: {fileID: 8644493357824207557}
+    - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      insertIndex: 7
+      addedObject: {fileID: 7618673724439498827}
+    - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 45645392178134319}
+    - targetCorrespondingSourceObject: {fileID: 6574975663493176128, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      insertIndex: 9
       addedObject: {fileID: 5193432584271619944}
     - targetCorrespondingSourceObject: {fileID: 6574975662670090746, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       insertIndex: 0

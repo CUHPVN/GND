@@ -8,8 +8,8 @@ public class TutorialManager : MonoBehaviour
     private void OnEnable()
     {
         // Đăng ký lắng nghe
-        AchievementManager.Instance.OnAchievementUnlocked += HandleAchievementUnlocked;
-        GamePlayManager.Instance.BlockInput = true;
+        if(AchievementManager.Instance != null) AchievementManager.Instance.OnAchievementUnlocked += HandleAchievementUnlocked;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = true;
     }
 
     private void OnDisable()
@@ -17,6 +17,8 @@ public class TutorialManager : MonoBehaviour
         // Hủy đăng ký để tránh memory leak
         if (AchievementManager.Instance != null)
             AchievementManager.Instance.OnAchievementUnlocked -= HandleAchievementUnlocked;
+        if (GamePlayManager.Instance != null)
+            GamePlayManager.Instance.BlockInput = false;
     }
 
     private void HandleAchievementUnlocked(string id)
@@ -24,7 +26,7 @@ public class TutorialManager : MonoBehaviour
         switch (id)
         {
             case "Silas":
-                GamePlayManager.Instance.BlockInput = false;
+                if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = false;
                 break;
             case "stand_on_farmland":
                 NextCutscene();
@@ -59,16 +61,17 @@ public class TutorialManager : MonoBehaviour
 
     private void TurnOnCutscene()
     {
-        EcCutsceneManager.instance.gameObject.SetActive(true);
+        if(EcCutsceneManager.instance != null) EcCutsceneManager.instance.gameObject.SetActive(true);
     }
 
     private void TurnOffCutscene()
     {
-        EcCutsceneManager.instance.gameObject.SetActive(false);
+        if(EcCutsceneManager.instance != null) EcCutsceneManager.instance.gameObject.SetActive(false);
     }
 
     private void TryNextWhenMoveAndDrag()
     {
+        if(AchievementManager.Instance == null) return;
         if(AchievementManager.Instance.IsCompleted("first_drag") && AchievementManager.Instance.IsCompleted("first_move"))
         {
             NextCutscene();

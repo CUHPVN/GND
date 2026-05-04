@@ -9,7 +9,7 @@ namespace UI
     {
         void Start()
         {
-            UIManager.Instance.OpenUI<CanvasGamePlay>();
+            if(UIManager.Instance != null) UIManager.Instance.OpenUI<CanvasGamePlay>();
         }
 
         // Update is called once per frame

@@ -12,6 +12,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             if(instance == null) instance = FindObjectOfType<T>();
             if (instance == null)
             {
+                Debug.Log("T instance not found. Creating one."+nameof(T));
                 instance = new GameObject(nameof(T)).AddComponent<T>();
             }
             return instance;

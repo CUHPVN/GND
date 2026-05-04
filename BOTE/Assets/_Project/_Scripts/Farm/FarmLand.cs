@@ -29,7 +29,7 @@ public class FarmLand : MonoBehaviour,IInteractable
 
     public void Start()
     {
-        GamePlayManager.Instance.OnDayChange += NextDay;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnDayChange += NextDay;
         plant.ResetPlant();
     }
     public void ResetFarmLand()
@@ -85,13 +85,13 @@ public class FarmLand : MonoBehaviour,IInteractable
         }else
         if(isPlowed==false && currentItem.itemSO == hoe)
         {
-            AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("use_hoe"));
+            if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("use_hoe"));
             isPlowed=true;
             ChangeVisual();
             return false;
         }if(!isDry && plant.GetPlantSO() == null && CheckSeed(currentItem.itemSO,out ItemSO seed))
         {
-            AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("plant_seed"));
+            if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("plant_seed"));
             PlantSO plantSO = plantSOConfig.GetPlant(seed);
             this.plantSO = plantSO;
             plant.SetPlantSO(plantSO);
@@ -103,6 +103,7 @@ public class FarmLand : MonoBehaviour,IInteractable
     }
     private void Harvest()
     {
+        if(CircularManager.Instance == null) return;
         ItemSO cropSO = plantSOConfig.GetCrop(this.plantSO);
         CircularManager.Instance.AddItem(cropSO,plantSO.count);
     }

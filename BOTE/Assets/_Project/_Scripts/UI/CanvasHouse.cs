@@ -20,8 +20,9 @@ public class CanvasHouse : UICanvas
     public override void Open()
     {
         base.Open();
-        GamePlayManager.Instance.BlockInput = true;
-        ItemData itemData = CircularManager.Instance.FindItem(syringe);
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = true;
+        ItemData itemData = null;
+        if(CircularManager.Instance != null) itemData = CircularManager.Instance.FindItem(syringe);
         itemCount.text = itemData!=null? itemData.count.ToString(): "0";
     }
     public void Start()
@@ -42,6 +43,7 @@ public class CanvasHouse : UICanvas
     }
     private void HealthButton()
     {
+        if(CircularManager.Instance == null) return;
         ItemData itemData = CircularManager.Instance.FindItem(syringe);
         if(itemData != null)
         {
@@ -54,7 +56,7 @@ public class CanvasHouse : UICanvas
     }
     public override void CloseDirectly()
     {
-        GamePlayManager.Instance.BlockInput = false;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = false;
         base.CloseDirectly();
     }
 
@@ -64,7 +66,7 @@ public class CanvasHouse : UICanvas
     }
     public void NextDayButton()
     {
-        GamePlayManager.Instance.NextDay();
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.NextDay();
         Close(0);
     }
 }

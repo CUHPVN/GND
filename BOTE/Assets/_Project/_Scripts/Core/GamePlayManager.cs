@@ -41,6 +41,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     }
     public void NextDay()
     {
+        if(AchievementManager.Instance == null) return;
         if(!AchievementManager.Instance.IsCompleted("open_house")) return;
         AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("next_day_"+day));
         day++;

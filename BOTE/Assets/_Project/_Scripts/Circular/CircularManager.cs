@@ -24,17 +24,23 @@ public class CircularManager : Singleton<CircularManager>
     {
         OnItemChange += SetUI;
     }
+    void OnDisable()
+    {
+        OnItemChange -= SetUI;
+    }
     private void SetUI(ItemData item)
     {
-        canvas.SetItem(itemDatas.ToArray());
+        if(canvas != null) canvas.SetItem(itemDatas.ToArray());
     }
     void Start()
     {
+        if(UIManager.Instance == null) return;
         canvas = UIManager.Instance.OpenUI<CanvasCircular>();
-        canvas.Close(0);
+        if(canvas != null) canvas.Close(0);
     }
     void Update()
     {
+        if(GamePlayManager.Instance == null || canvas == null) return;
         if (!GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.E))
         {
             canvas.SetItem(itemDatas.ToArray());
@@ -134,7 +140,7 @@ public class CircularManager : Singleton<CircularManager>
         currentItem = itemData;
         if(itemData.itemSO == hoe)
         {
-            AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("equip_hoe"));
+            if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("equip_hoe"));
         }
         OnItemChange?.Invoke(itemData);
     }

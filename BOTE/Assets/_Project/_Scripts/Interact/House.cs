@@ -11,8 +11,8 @@ public class House : MonoBehaviour,IInteractable
 
     public bool Interact(ItemData currentItem, out bool isItemChanged)
     {
-        AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("open_house"));
-        UIManager.Instance.OpenUI<CanvasHouse>();
+        if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("open_house"));
+        if(UIManager.Instance != null) UIManager.Instance.OpenUI<CanvasHouse>();
         isItemChanged = false;
         return false;
     }

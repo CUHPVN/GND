@@ -11,6 +11,7 @@ public class Well : MonoBehaviour,IInteractable
     public bool Interact(ItemData currentItem, out bool isItemChanged)
     {
         isItemChanged = false;
+        if(AchievementManager.Instance == null) return false;
         if (currentItem.itemSO == emptyWateringCan)
         {
             AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("fill_wateringcan"));

@@ -10,15 +10,15 @@ public class CanvasGamePlay : UICanvas
     [SerializeField] private TMP_Text dayText;
     private void OnEnable()
     {
-        CircularManager.Instance.OnItemChange += OnItemChange;
-        GamePlayManager.Instance.OnDayChange += OnDayChange;
-        GamePlayManager.Instance.OnMoneyChange += OnMoneyChange;
+        if(CircularManager.Instance != null) CircularManager.Instance.OnItemChange += OnItemChange;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnDayChange += OnDayChange;
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnMoneyChange += OnMoneyChange;
     }
     private void OnDisable()
     {
-        CircularManager.Instance.OnItemChange -= OnItemChange;
-        GamePlayManager.Instance.OnDayChange -= OnDayChange;
-        GamePlayManager.Instance.OnMoneyChange -= OnMoneyChange;
+        if(CircularManager.Instance!=null) CircularManager.Instance.OnItemChange -= OnItemChange;
+        if(GamePlayManager.Instance!=null) GamePlayManager.Instance.OnDayChange -= OnDayChange;
+        if(GamePlayManager.Instance!=null) GamePlayManager.Instance.OnMoneyChange -= OnMoneyChange;
     }
 
     private void OnItemChange(ItemData data)

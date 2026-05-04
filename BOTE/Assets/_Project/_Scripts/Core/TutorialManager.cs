@@ -1,3 +1,5 @@
+using System;
+using HisaGames.Cutscene;
 using HisaGames.CutsceneManager;
 using UnityEngine;
 public class TutorialManager : MonoBehaviour
@@ -35,8 +37,35 @@ public class TutorialManager : MonoBehaviour
             case "equip_hoe":
                 NextCutscene();
                 break;
+            case "use_hoe":
+                NextCutscene();
+                break;
+            case "fill_wateringcan":
+                NextCutscene();
+                break;
+            case "plant_seed":
+                NextCutscene();
+                break;
+            case "next_day_1":
+                TurnOnCutscene();
+                NextCutscene();
+                break;
+            case "open_house":
+                TurnOffCutscene();
+                break;
         }
     }
+
+    private void TurnOnCutscene()
+    {
+        EcCutsceneManager.instance.gameObject.SetActive(true);
+    }
+
+    private void TurnOffCutscene()
+    {
+        EcCutsceneManager.instance.gameObject.SetActive(false);
+    }
+
     private void TryNextWhenMoveAndDrag()
     {
         if(AchievementManager.Instance.IsCompleted("first_drag") && AchievementManager.Instance.IsCompleted("first_move"))

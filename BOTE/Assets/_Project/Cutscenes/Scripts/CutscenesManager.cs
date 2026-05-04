@@ -28,9 +28,9 @@ public class CutsceneManagers : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Activate();
-        }
+        // if(Input.GetKeyDown(KeyCode.A))
+        // {
+        //     Activate();
+        // }
     }
 }

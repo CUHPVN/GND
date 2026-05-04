@@ -13,6 +13,14 @@ public class Well : MonoBehaviour,IInteractable
         isItemChanged = false;
         if (currentItem.itemSO == emptyWateringCan)
         {
+            AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("fill_wateringcan"));
+            currentItem.itemSO = fullWateringCan;
+            currentItem.count=5;
+            isItemChanged = true;
+        }else
+        if (currentItem.itemSO == fullWateringCan)
+        {
+            AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("fill_wateringcan"));
             currentItem.itemSO = fullWateringCan;
             currentItem.count=5;
             isItemChanged = true;

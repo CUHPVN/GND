@@ -29,6 +29,7 @@ public class CanvasBarnaby : UICanvas
     {
         base.Open();
         if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = true;
+        if(GamePlayManager.Instance != null) coinText.text = GamePlayManager.Instance.Money.ToString();
         LoadInventory();
         LoadShop();
         HideSelected();
@@ -98,8 +99,9 @@ public class CanvasBarnaby : UICanvas
         interactButton.gameObject.SetActive(false);
     }
 
-    public void ResetShop()
+    public void ResetShop(int day=0)
     {
+        shopItem.Clear();
         foreach (ItemSO itemSO in sellItems)
         {
             shopItem.Add(new ItemData
@@ -167,6 +169,7 @@ public class CanvasBarnaby : UICanvas
     }
     public void InitEvent()
     {
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnDayChange += ResetShop;
         if(GamePlayManager.Instance != null) GamePlayManager.Instance.OnMoneyChange+=SetCoinText;
         interactButton.onClick.AddListener(() => TryInteract());
         closeButton.onClick.AddListener(() => CloseButton());
@@ -179,7 +182,9 @@ public class CanvasBarnaby : UICanvas
     }
     public override void CloseDirectly()
     {
+        if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("exit_interact_with_barnaby"));
         if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = false;
+
         base.CloseDirectly();
     }
 

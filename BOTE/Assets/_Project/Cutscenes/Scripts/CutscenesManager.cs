@@ -1,7 +1,7 @@
 using UnityEngine;
 using HisaGames.Cutscene;
 
-public class CutsceneManagers : MonoBehaviour
+public class CutsceneManagers : Singleton<CutsceneManagers>
 {
     public EcCutscene cutscene;
     public GameObject background;
@@ -25,7 +25,14 @@ public class CutsceneManagers : MonoBehaviour
         intro.SetActive(true);
         cutscene.StartCutscene();
     }
-
+    public void TurnOffBackground()
+    {
+        if(background != null) background.SetActive(false);
+    }
+    public void TurnOnBackground()
+    {
+        if(background != null) background.SetActive(true);
+    }
     private void Update()
     {
         // if(Input.GetKeyDown(KeyCode.A))

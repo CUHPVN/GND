@@ -1,10 +1,9 @@
-using System;
-using HisaGames.Cutscene;
 using HisaGames.CutsceneManager;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class TutorialManager : MonoBehaviour
 {
+    [SerializeField] private GameObject Barnaby;
     private void OnEnable()
     {
         // Đăng ký lắng nghe
@@ -56,16 +55,64 @@ public class TutorialManager : MonoBehaviour
             case "open_house":
                 TurnOffCutscene();
                 break;
+            case "Day1":
+                TurnOffBackground();
+                break;
+            case "TuoiCay1":
+                TurnOnBackground();
+                break;
+            case "Day2":
+                TurnOffBackground();
+                break;
+            case "TuoiCay2":
+                TurnOffCutscene();
+                break;
+            case "next_day_2":
+                TurnOnBarnaby();
+                TurnOnCutscene();
+                NextCutscene();
+                break;
+            case "interact_with_barnaby":
+                TurnOffCutscene();
+                break;
+            case "exit_interact_with_barnaby":
+                TurnOnCutscene();
+                TurnOnBackground();
+                NextCutscene();
+                break;
+            case "day_2_use_wateringcan":
+                NextCutscene();
+                break;
+            case "Silasxphandien":
+                EndDemo();
+                break;
         }
     }
-
+    private void EndDemo(){
+        SceneManager.LoadScene("End");
+    }
+    private void TurnOnBarnaby()
+    {
+        if(Barnaby != null) Barnaby.SetActive(true);
+        if(InteractGridManager.Instance != null) InteractGridManager.Instance.SetInteractObject(Barnaby);
+    }
+    private void TurnOffBackground(){
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = false;
+        CutsceneManagers.Instance.TurnOffBackground();
+    }
+    private void TurnOnBackground(){
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = true;
+        CutsceneManagers.Instance.TurnOnBackground();
+    }
     private void TurnOnCutscene()
     {
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = true;
         if(EcCutsceneManager.instance != null) EcCutsceneManager.instance.gameObject.SetActive(true);
     }
 
     private void TurnOffCutscene()
     {
+        if(GamePlayManager.Instance != null) GamePlayManager.Instance.BlockInput = false;
         if(EcCutsceneManager.instance != null) EcCutsceneManager.instance.gameObject.SetActive(false);
     }
 

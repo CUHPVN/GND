@@ -16,9 +16,9 @@ public class CanvasGamePlay : UICanvas
     }
     private void OnDisable()
     {
-        if(CircularManager.Instance!=null) CircularManager.Instance.OnItemChange -= OnItemChange;
-        if(GamePlayManager.Instance!=null) GamePlayManager.Instance.OnDayChange -= OnDayChange;
-        if(GamePlayManager.Instance!=null) GamePlayManager.Instance.OnMoneyChange -= OnMoneyChange;
+        //if(CircularManager.Instance!=null) CircularManager.Instance.OnItemChange -= OnItemChange;
+        //if(GamePlayManager.Instance!=null) GamePlayManager.Instance.OnDayChange -= OnDayChange;
+        //if(GamePlayManager.Instance!=null) GamePlayManager.Instance.OnMoneyChange -= OnMoneyChange;
     }
 
     private void OnItemChange(ItemData data)

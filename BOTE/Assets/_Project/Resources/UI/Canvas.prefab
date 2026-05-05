@@ -591,8 +591,8 @@ MonoBehaviour:
         m_Calls: []
     autoNext: 1
   currentID: 0
-  charaNameText: {fileID: 0}
-  chatText: {fileID: 0}
+  charaNameText: {fileID: 4855371259324000186}
+  chatText: {fileID: 4855371258508166058}
 --- !u!1 &1992951561856025254
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ MonoBehaviour:
     cutscenePostEvent:
       m_PersistentCalls:
         m_Calls: []
-    autoNext: 1
+    autoNext: 0
   - name: 
     charactersData: []
     propsData: []
@@ -675,10 +675,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-    autoNext: 1
+    autoNext: 0
   currentID: 4
-  charaNameText: {fileID: 0}
-  chatText: {fileID: 0}
+  charaNameText: {fileID: 4855371259324000186}
+  chatText: {fileID: 4855371258508166058}
 --- !u!1 &2402811156496594548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,8 +1584,8 @@ MonoBehaviour:
           m_CallState: 2
     autoNext: 1
   currentID: 6
-  charaNameText: {fileID: 0}
-  chatText: {fileID: 0}
+  charaNameText: {fileID: 4855371259324000186}
+  chatText: {fileID: 4855371258508166058}
 --- !u!1 &7907244157145696672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,7 +3557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.size
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[0]
@@ -3578,13 +3578,25 @@ PrefabInstance:
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[4]
       value: 
-      objectReference: {fileID: 3184375529053838915}
+      objectReference: {fileID: 965971690973370650}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[5]
       value: 
-      objectReference: {fileID: 8022253194476830670}
+      objectReference: {fileID: 3184375529053838915}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
       propertyPath: cutscenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 9090956772023839979}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: cutscenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 4719944443683716113}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: cutscenes.Array.data[8]
+      value: 
+      objectReference: {fileID: 8022253194476830670}
+    - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}
+      propertyPath: cutscenes.Array.data[9]
       value: 
       objectReference: {fileID: 5218599089645927033}
     - target: {fileID: 6574975663493176134, guid: 6056f01e95dfba646bc4cc2b3ad70de0, type: 3}

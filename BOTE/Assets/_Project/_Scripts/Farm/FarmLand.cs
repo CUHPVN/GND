@@ -79,6 +79,8 @@ public class FarmLand : MonoBehaviour,IInteractable
         }else
         if(isPlowed && isDry && currentItem.itemSO == fullWateringCan)
         {
+            Debug.Log("day_2_use_wateringcan");
+            if(AchievementManager.Instance != null) AchievementManager.Instance.TriggerAchievement(AchievementManager.Instance.GetAchievement("day_2_use_wateringcan"));
             isDry=false;
             ChangeVisual();
             return true;

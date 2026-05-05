@@ -99,6 +99,7 @@ Assets/
    ItemData.cs
   _Scripts/Core/
    Boots.cs
+   End.cs
    GamePlayManager.cs
    TutorialManager.cs
   _Scripts/Farm/

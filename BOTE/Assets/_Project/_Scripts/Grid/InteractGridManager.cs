@@ -3,7 +3,7 @@ using UnityEngine;
 using CUHP;
 using Unity.VisualScripting;
 
-public class InteractGridManager : MonoBehaviour
+public class InteractGridManager : Singleton<InteractGridManager>
 {
     [SerializeField] private int width;
     [SerializeField] private int height;
@@ -26,6 +26,16 @@ public class InteractGridManager : MonoBehaviour
                 int y = interactable.position.y;
                 grid.SetGridObject(x,y,new InteractObject(grid,x,y,interactable));
             }
+        }
+    }
+    public void SetInteractObject(GameObject gameObject)
+    {
+        IInteractable interactable = gameObject.GetComponent<IInteractable>();
+        if (interactable != null)
+        {
+            int x = interactable.position.x;
+            int y = interactable.position.y;
+            grid.SetGridObject(x,y,new InteractObject(grid,x,y,interactable));
         }
     }
 }

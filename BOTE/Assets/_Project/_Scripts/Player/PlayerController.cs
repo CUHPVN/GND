@@ -132,13 +132,14 @@ public class PlayerController : MonoBehaviour
             ShowInteract();
             if (GamePlayManager.Instance != null && !GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.F))
             {
-                if (CircularManager.Instance != null && farmLand.Interact(CircularManager.Instance.currentItem,out bool isItemChanged))
+                bool interact= farmLand.Interact(CircularManager.Instance.currentItem,out bool isItemChanged);
+                if (CircularManager.Instance != null && interact)
                 {
                     CircularManager.Instance.UseItem();
-                    if (isItemChanged)
-                    {
-                        CircularManager.Instance.ChangeItem();
-                    }
+                }
+                if (isItemChanged)
+                {
+                    CircularManager.Instance.ChangeItem();
                 }
             }
             
@@ -149,13 +150,15 @@ public class PlayerController : MonoBehaviour
             ShowInteract();
             if (GamePlayManager.Instance != null && !GamePlayManager.Instance.BlockInput && Input.GetKeyDown(KeyCode.F))
             {
-                if (CircularManager.Instance != null && interactObject.interactable.Interact(CircularManager.Instance.currentItem,out bool isItemChanged))
+                bool interact = interactObject.interactable.Interact(CircularManager.Instance.currentItem,out bool isItemChanged);
+                if (CircularManager.Instance != null && interact)
                 {
                     CircularManager.Instance.UseItem();
-                    if (isItemChanged)
-                    {
-                        CircularManager.Instance.ChangeItem();
-                    }
+                   
+                }
+                if (isItemChanged)
+                {
+                    CircularManager.Instance.ChangeItem();
                 }
             }
         }
